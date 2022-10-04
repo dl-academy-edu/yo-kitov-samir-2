@@ -1,0 +1,124 @@
+/**header**/
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+
+  color: var(--black-text);
+  line-height: 19px;
+  text-transform: uppercase;
+
+  margin: 50px auto 37px;
+}
+
+.header__link:hover,
+.header__list-menu__link:hover,
+.header__search-submit:hover,
+.header__contact-link:hover {
+  opacity: 0.5;
+}
+
+.header__link:active,
+.header__list-menu__link:active,
+.header__search-submit:active,
+.header__contact-link:active {
+  opacity: 0.2;
+}
+
+.header__wrap-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  margin-left: 60px;
+  padding-bottom: 5px;
+}
+
+.header__list-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+}
+
+.header__list-menu__link {
+  font-size: 14px;
+}
+
+/*.header__search*/
+.header__wrap-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.header__form-search {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  min-height: 40px;
+}
+
+.header__search {
+  padding: 0;
+  width: 0;
+  height: 0;
+  border: 0 solid var(--basic-black);
+  border-radius: 10px;
+  transition: 0.5s;
+  transition-timing-function: ease-in;
+}
+
+.header__search:focus,
+.header__form-search:hover > .header__search {
+  width: 200px;
+  height: 40px;
+  border: 2px solid var(--basic-black);
+  margin: -2px;
+  padding: 10px;
+  transition: 0.5s, border-width 0s;
+  transition-timing-function: ease-in;
+}
+
+.header__search-submit {
+  width: 42px;
+  height: 22px;
+  background-image: url("../../img/svg/search.svg");
+  background-position-x: 10px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  padding: 10px 0;
+}
+
+.header__contact-link {
+  font-weight: 700;
+  margin-left: 14px;
+  font-size: 14px;
+}
