@@ -1,0 +1,27 @@
+.link {
+  padding: 9px 22px;
+  background-color: $basic-black;
+
+  color: $basic-white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+
+  &:hover {
+    background-color: $brow;
+  }
+
+  &:active {
+    background-color: $btn-active;
+  }
+
+  &:focus {
+    outline: 2px solid $brow;
+  }
+
+  &:disabled {
+    color: $text-disabled;
+    background-color: $button-form-disabled;
+  }
+}

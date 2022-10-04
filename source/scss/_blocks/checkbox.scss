@@ -1,0 +1,58 @@
+.checkbox:disabled + .checkbox__homemade {
+  color: $text-checkbox-disabled;
+}
+
+.checkbox:checked + .checkbox__homemade:before {
+  display: block;
+}
+
+.checkbox:focus + .checkbox__homemade:after {
+  outline: 2px solid $basic-black;
+}
+
+.checkbox:checked + .checkbox__homemade:after {
+  background-color: $basic-white;
+}
+
+.checkbox:disabled + .checkbox__homemade:after {
+  border: 2px solid $disablet-checkbox;
+}
+
+.checkbox__homemade {
+  position: relative;
+
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    -webkit-transform: translateY(-50%);
+
+    -ms-transform: translateY(-50%);
+
+    transform: translateY(-50%);
+
+    width: 19px;
+    height: 19px;
+  }
+
+  &:before {
+    background-image: url("../../img/svg/mark.svg");
+    background-position: 3px 0;
+    background-repeat: no-repeat;
+    display: none;
+    z-index: 1;
+  }
+
+  &:after {
+    border: 2px solid $brow;
+    border-radius: 2px;
+  }
+}

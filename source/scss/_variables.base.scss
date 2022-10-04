@@ -1,0 +1,56 @@
+/*
+  System font stack used as base sans-serif and monospace
+  https://css-tricks.com/snippets/css/system-font-stack/
+*/
+$font-serif-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica,
+Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-mono-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+/*
+  Themes fonts
+*/
+$font-base-family: $font-serif-family;
+
+/*
+* Breakpoints
+*/
+
+$media-tablet: 768px;
+$media-tablet-landscape: 1024px;
+$media-desktop: 1200px;
+
+/*
+* Colors
+*/
+
+$basic-white: #ffffff;
+$basic-black: #000000;
+$document-disabled: rgba(125, 151, 218, 0.8);
+$light-grey: #e5eaf8;
+$black-text: #1e0606;
+$border-input: rgba(0, 0, 0, 0.2);
+$bg-range: rgba(0, 0, 0, 0.5);
+$border-checkbox: #c29974;
+$button-form-disabled: #c1c1c1;
+$button-disabled: #c7c1c1;
+$text-disabled: #e1e1e1;
+$shadow-link: rgba(147, 3, 3, 0.25);
+$stripes-slider: #725f5b;
+$light-brow: #d6cac2;
+$bg-slider: #eee4db;
+$brow: #c29974;
+$light-blue: #e1f0f7;
+$footer-bg: #434343;
+$footer-title: #aaaaaa;
+$footer-email: #ebebeb;
+$footer-email-border: #fffdfd;
+$hover-star: #836E5B;
+$social-bg: #666666;
+$web-design-text: #a2a2a2;
+$pink: #f3d0db;
+$light-pink: #eddeeb;
+$toy-form-bg: rgba(125, 151, 218, 0.2);
+$btn-active: #cfaf91;
+$text-checkbox-disabled: #908484;
+$disablet-checkbox: #e1cdba;
+$text-time: #818181;
