@@ -1,0 +1,43 @@
+<section class="feedback @@classPopup">
+  <h2 class="visually-hidden">Обратная связь</h2>
+
+  <form class="feedback__form" action="https://echo.htmlacademy.ru/" method="post" name="form-contact">
+    <fieldset class="feedback__form__data fieldset">
+      <div class="feedback__form__wrap-input">
+        <label class="feedback__form__label" for="name">Name</label>
+        <input class="feedback__form__input" id="name" type="text" name="name" placeholder="Ivan Ivanov">
+      </div>
+
+      <div class="feedback__form__wrap-input feedback__form__wrap-input--phone">
+        <label class="feedback__form__label" for="phone">Phone</label>
+        <input class="feedback__form__input" id="phone" type="text" name="phone">
+      </div>
+
+      <div class="feedback__form__wrap-input feedback__form__wrap-input--email">
+        <label class="feedback__form__label" for="email">Email</label>
+        <input class="feedback__form__input" id="email" type="email" name="email">
+      </div>
+
+      <div class="feedback__form__wrap-input">
+        <label class="feedback__form__label" for="message">Message</label>
+        <textarea class="feedback__form__input feedback__form__data__input--textarea" id="message"
+                  name="message"></textarea>
+      </div>
+    </fieldset>
+
+    <fieldset class="feedback__form__personal-data fieldset checkbox-wrap">
+      <input class="visually-hidden" id="agreement" type="checkbox" name="agreement">
+      <label class="feedback__form__personal-data__label checkbox-custom" for="agreement">By clicking on the
+        button,
+        you consent to the
+        processing of your
+        personal
+        data
+      </label>
+    </fieldset>
+
+    <button class="feedback__form__submit link" type="submit" disabled>Submit</button>
+
+    <button class="@@classButton" aria-label="Закрыть попап"></button>
+  </form>
+</section>

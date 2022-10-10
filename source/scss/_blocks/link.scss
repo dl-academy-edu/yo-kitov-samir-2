@@ -8,6 +8,8 @@
   font-size: 16px;
   line-height: 22px;
 
+  transition: background-color 0.4s;
+
   &:hover {
     background-color: $brow;
   }

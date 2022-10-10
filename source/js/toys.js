@@ -15,3 +15,4 @@ function handleInputChange() {
 handleInputChange();
 
 rangeInput.addEventListener('input', handleInputChange);
+

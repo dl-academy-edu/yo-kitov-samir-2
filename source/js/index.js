@@ -1,18 +1,10 @@
-const popup = document.querySelector('.popup');
+const popup = document.querySelector('.popup') || document.querySelector('.feedback');
 const popupClose = popup.querySelector('.popup__close');
 const popupOpen = document.querySelector('.slider__info__btn');
 const checkboxAgreement = popup.querySelector('#agreement');
-const submitPopup = popup.querySelector('.feedback-form__submit');
+const submitPopup = popup.querySelector('.feedback__form__submit');
 
 const POPUP_ACTIVE = 'popup--active';
-
-function closePopup() {
-  popup.classList.remove(POPUP_ACTIVE);
-}
-
-function switchDisabled() {
-  submitPopup.disabled = !submitPopup.disabled;
-}
 
 // закрытие и открытие попапа
 if (popupOpen) {
@@ -48,3 +40,13 @@ popup.addEventListener('click', function (event) {
 
 // активировать кнопку формы
 checkboxAgreement.addEventListener('click', switchDisabled);
+
+// функции
+function closePopup() {
+  popup.classList.remove(POPUP_ACTIVE);
+}
+
+function switchDisabled() {
+  submitPopup.disabled = !submitPopup.disabled;
+}
+

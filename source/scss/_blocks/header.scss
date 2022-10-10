@@ -1,42 +1,51 @@
 /**header**/
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 
-  color: var(--black-text);
+  width: 100%;
+
+  color: $black-text;
   line-height: 19px;
   text-transform: uppercase;
 
   margin: 50px auto 37px;
 }
 
+.header__link,
+.header-nav__list-menu__link,
+.header__search-submit,
+.header__contact-link {
+  transition: opacity 0.4s;
+}
+
 .header__link:hover,
-.header__list-menu__link:hover,
+.header-nav__list-menu__link:hover,
 .header__search-submit:hover,
 .header__contact-link:hover {
   opacity: 0.5;
 }
 
+.header__link,
+.header-nav__list-menu__link,
+.header__search-submit,
+.header__contact-link {
+  transition: opacity 0.4s;
+}
+
 .header__link:active,
-.header__list-menu__link:active,
+.header-nav__list-menu__link:active,
 .header__search-submit:active,
 .header__contact-link:active {
   opacity: 0.2;
 }
 
 .header__wrap-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
-.header__nav {
+.header-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,7 +56,7 @@
   padding-bottom: 5px;
 }
 
-.header__list-menu {
+.header-nav__list-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,19 +70,14 @@
   column-gap: 20px;
 }
 
-.header__list-menu__link {
+.header-nav__list-menu__link {
   font-size: 14px;
 }
 
 /*.header__search*/
 .header__wrap-search {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   padding-bottom: 5px;
 }
@@ -90,7 +94,7 @@
   padding: 0;
   width: 0;
   height: 0;
-  border: 0 solid var(--basic-black);
+  border: 0 solid $basic-black;
   border-radius: 10px;
   transition: 0.5s;
   transition-timing-function: ease-in;
@@ -100,7 +104,7 @@
 .header__form-search:hover > .header__search {
   width: 200px;
   height: 40px;
-  border: 2px solid var(--basic-black);
+  border: 2px solid $basic-black;
   margin: -2px;
   padding: 10px;
   transition: 0.5s, border-width 0s;

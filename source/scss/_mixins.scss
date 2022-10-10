@@ -1,17 +1,11 @@
-@mixin no-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+@mixin header-link-hover {
+  opacity: 0.5;
 }
 
-@mixin no-btn {
-  background: transparent;
-  border: 0;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
+@mixin header-link-active {
+  opacity: 0.2;
 }
+
 
 @mixin clearfix {
   &::after {

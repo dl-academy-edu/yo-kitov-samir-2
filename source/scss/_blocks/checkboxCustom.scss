@@ -1,24 +1,24 @@
-.checkbox:disabled + .checkbox__homemade {
+input[type="checkbox"]:disabled + .checkbox__homemade {
   color: $text-checkbox-disabled;
 }
 
-.checkbox:checked + .checkbox__homemade:before {
+input[type="checkbox"]:checked + .checkbox-custom:before {
   display: block;
 }
 
-.checkbox:focus + .checkbox__homemade:after {
+input[type="checkbox"]:focus + .checkbox-custom:after {
   outline: 2px solid $basic-black;
 }
 
-.checkbox:checked + .checkbox__homemade:after {
+input[type="checkbox"]:checked + .checkbox-custom:after {
   background-color: $basic-white;
 }
 
-.checkbox:disabled + .checkbox__homemade:after {
+input[type="checkbox"]:disabled + .checkbox-custom:after {
   border: 2px solid $disablet-checkbox;
 }
 
-.checkbox__homemade {
+.checkbox-custom {
   position: relative;
 
   &:hover {

@@ -1,0 +1,37 @@
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.categories__item {
+  position: relative;
+  min-width: 280px;
+  max-width: 280px;
+  height: 270px;
+  background-color: $brow;
+}
+
+.categories__link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-color: $basic-white;
+  }
+}
+
+.categories__subtitle {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 32px;
+  text-transform: uppercase;
+  text-shadow: 0 0 40px $shadow-link;
+  color: $basic-white;
+  text-align: center;
+}

@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en" class="no-js page">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width">
+  <meta name="google" content="notranslate">
+  <meta name="format-detection" content="telephone=no">
+
+  <title>Toys</title>
+
+  <script>
+    var docElement = document.documentElement;
+    docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
+  </script>
+
+  <!-- Favicon -->
+
+  <!-- build:css -->
+  <link href="css/style.min.css" rel="stylesheet">
+  <!-- endbuild -->
+</head>
+
+<body>
+@@include("blocks/header.html", {
+hrefLogo: "./index.html",
+hrefCatalog: "./catalog.html",
+hrefAbout: "./about.html",
+hrefBlog: "./blog.html",
+hrefAnimation: "./animation.html",
+hrefSvg: "./svg.html",
+hrefGrid: "./grid.html",
+hrefContact: "./contact.html"
+})
+
+<main>
+  <section class="page-title container">
+    <h1 class="page-title__title main-title">Toy for kids</h1>
+
+    <ul class="page-title__crumbs">
+      <li class="page-title__crumbs__item">
+        <a href="./index.html" class="page-title__crumbs__link">Home</a>
+      </li>
+
+      <li class="page-title__crumbs__item">
+        <a href="./catalog.html" class="page-title__crumbs__link">Catalog</a>
+      </li>
+
+      <li class="page-title__crumbs__item page-title__crumbs__item--active">
+        <a class="page-title__crumbs__link"> Toys</a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="options">
+    <h2 class="visually-hidden">Настройки формы</h2>
+    <form class="options__form container" name="options" action="https://echo.htmlacademy.ru/" method="get">
+      <fieldset class="options__form__slider-wrap fieldset">
+        <legend class="options__form__title">Cost</legend>
+
+        <label class="visually-hidden" for="range">Ползунок диапозона</label>
+        <input class="options__form__range" id="range" type="range" name="range" min="0" max="500"
+               value="103">
+
+        <div class="options__form__slider__wrap-numbers">
+          <span class="options__form__slider__number">0</span>
+          <span class="options__form__slider__number">500</span>
+        </div>
+      </fieldset>
+
+      <fieldset class="options__form__color fieldset">
+        <legend class="options__form__title">Color</legend>
+
+        <div class="options__form__color__inner-wrap checkbox-wrap">
+          <input class="visually-hidden" id="black" type="checkbox" name="black" checked>
+          <label class="options__form__color__label checkbox-custom" for="black">Black</label>
+        </div>
+
+        <div class="options__form__color__inner-wrap checkbox-wrap">
+          <input class="visually-hidden" id="blue" type="checkbox" name="blue">
+          <label class="options__form__color__label checkbox-custom" for="blue">Blue</label>
+        </div>
+
+        <div class="options__form__color__inner-wrap checkbox-wrap">
+          <input class="visually-hidden" id="green" type="checkbox" name="green">
+          <label class="options__form__color__label checkbox-custom" for="green">Green</label>
+        </div>
+
+        <div class="options__form__color__inner-wrap checkbox-wrap">
+          <input class="visually-hidden" id="white" type="checkbox" name="white">
+          <label class="options__form__color__label checkbox-custom" for="white">White</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="options__form__delivery fieldset">
+        <legend class="options__form__title">Delivery</legend>
+
+        <div class="options__form__delivery__inner-wrap">
+          <input class="options__form__delivery__radio visually-hidden" type="radio" name="shipping" id="free"
+                 value="free shipping">
+          <label class="options__form__delivery__label" for="free">Free shipping</label>
+        </div>
+
+        <div class="options__form__delivery__inner-wrap">
+          <input class="options__form__delivery__radio visually-hidden" type="radio" name="shipping" id="fast"
+                 value="fast shipping"
+                 checked>
+          <label class="options__form__delivery__label" for="fast">Fast shipping</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="options__form__amount fieldset">
+        <legend class="options__form__title">Amount</legend>
+
+        <div class="options__form__amount__inner-wrap">
+          <input class="options__form__amount__radio visually-hidden" type="radio" name="amount" id="min" value="0-5"
+                 checked>
+          <label class="options__form__amount__label" for="min">0-5</label>
+        </div>
+
+        <div class="options__form__amount__inner-wrap">
+          <input class="options__form__amount__radio visually-hidden" type="radio" name="amount" id="mid" value="10-20">
+          <label class="options__form__amount__label" for="mid">10-20</label>
+        </div>
+
+        <div class="options__form__amount__inner-wrap">
+          <input class="options__form__amount__radio visually-hidden" type="radio" name="amount" id="max" value="20-50">
+          <label class="options__form__amount__label" for="max">20-50</label>
+        </div>
+      </fieldset>
+
+      <button class="options__form__submit link" type="submit">Apply</button>
+    </form>
+  </section>
+
+  <section class="toys container">
+    <h2 class="visually-hidden">Каталог продуктов</h2>
+
+    <div class="slider">
+      <div class="slider__ribbon">
+        <ul class="slider__list">
+          <li class="slider__item">
+            <h3 class="slider__name">Sharky bean bag chair cover</h3>
+            <img class="slider__img" width="380" height="385" src="./img/sharky.jpg"
+                 alt="Чехол для стула в виде синей акулы с раскрытой пастью">
+            <span class="slider__prise">$60.00 USD</span>
+          </li>
+
+          <li class="slider__item">
+            <h3 class="slider__name">Brass deco frames</h3>
+            <img class="slider__img" width="380" height="385" src="./img/pendant.jpg"
+                 alt="Подвеска золотистого цвета">
+            <span class="slider__prise">$66.00 USD</span>
+          </li>
+
+          <li class="slider__item">
+            <h3 class="slider__name">Cibo full apron</h3>
+            <img class="slider__img" width="380" height="385" src="./img/apron.jpg"
+                 alt="Чёрный фартук с полосатой вставкой и лямками">
+            <span class="slider__prise">$60.00 USD</span>
+          </li>
+
+          <li class="slider__item">
+            <h3 class="slider__name">Gatcha gatcha gumball machine</h3>
+            <img class="slider__img" width="380" height="385" src="./img/gatcha.jpg" alt="Изображение товара">
+            <span class="slider__prise">$56.00 USD</span>
+          </li>
+
+          <li class="slider__item">
+            <h3 class="slider__name">Christmas advent scented candle</h3>
+            <img class="slider__img" width="380" height="385" src="./img/christmas_candle.jpg"
+                 alt="Ароматическая свеча с таблицей из цыфр">
+            <span class="slider__prise">$29.00 USD</span>
+          </li>
+
+          <li class="slider__item">
+            <h3 class="slider__name">Tangle spinning tea light</h3>
+            <img class="slider__img" width="380" height="385" src="./img/tea_candle.jpg"
+                 alt="Вращающаяся чайная свеча">
+            <span class="slider__prise">$56.00 USD</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="slider__controls">
+        <button class="slider__controls__arrow slider__controls__arrow--left "
+                aria-label="Стрелка переключения слайдера влево"></button>
+
+        <ul class="slider__controls__dots">
+          <li class="slider__controls__dot">
+            <button class="slider__controls__button slider__controls__button--active">1</button>
+          </li>
+
+          <li class="slider__controls__dot">
+            <button class="slider__controls__button">2</button>
+          </li>
+
+          <li class="slider__controls__dot">
+            <button class="slider__controls__button">3</button>
+          </li>
+
+          <li class="slider__controls__dot">
+            <button class="slider__controls__button">4</button>
+          </li>
+        </ul>
+
+        <button class="slider__controls__arrow slider__controls__arrow--right"
+                aria-label="Стрелка переключения слайдера вправо"></button>
+      </div>
+    </div>
+  </section>
+</main>
+
+@@include("blocks/footer.html")
+
+<script src="js/app.js" type="module" defer></script>
+</body>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" class="no-js page">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width">
+  <meta name="google" content="notranslate">
+  <meta name="format-detection" content="telephone=no">
+
+  <title>Catalog</title>
+
+  <script>
+    var docElement = document.documentElement;
+    docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
+  </script>
+
+  <!-- Favicon -->
+
+  <!-- build:css -->
+  <link href="css/style.min.css" rel="stylesheet">
+  <!-- endbuild -->
+</head>
+
+<body>
+@@include("blocks/header.html", {
+hrefLogo: "./index.html",
+hrefCatalog: "#",
+hrefAbout: "./about.html",
+hrefBlog: "./blog.html",
+hrefAnimation: "./animation.html",
+hrefSvg: "./svg.html",
+hrefGrid: "./grid.html",
+hrefContact: "./contact.html"
+})
+
+<main>
+  <section class="page-title container">
+    <h1 class="page-title__title main-title">Category Products</h1>
+
+    <ul class="page-title__crumbs">
+      <li class="page-title__crumbs__item">
+        <a href="./index.html" class="page-title__crumbs__link">Home</a>
+      </li>
+
+      <li class="page-title__crumbs__item page-title__crumbs__item--active">
+        <a class="page-title__crumbs__link">Catalog</a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="category-products">
+    <h2 class="visually-hidden">Категория продуктов</h2>
+
+    @@include("./blocks/categories.html", {
+    classUl: "container"
+    })
+  </section>
+
+  <section class="product-description container">
+    <h2 class="product-description__title title">Product Description</h2>
+    <p class="product-description__text">
+      Interactive doll Zapf Creation Baby Born Sister can drink from a bottle and
+      almost really cry. You can even bathe her, just like a little sister.
+    </p>
+    <p class="product-description__text">
+      A toy with a height of 43 cm bends its knees, the head rotates, it can stand upright. Such a doll will be an
+      excellent choice for a gift for a girl from 4 years old.
+    </p>
+    <p class="product-description__text">
+      The set includes a miniature set of fashionable clothes, a hairbrush, a bottle for water, a pair of hairpins and
+      elastic bands for hair, as well as two bracelets: one for the doll, the other for her young mistress.
+    </p>
+  </section>
+</main>
+
+@@include("blocks/footer.html")
+</body>

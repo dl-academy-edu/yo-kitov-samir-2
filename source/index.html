@@ -1,7 +1,9 @@
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="en" class="no-js page">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="viewport" content="width=device-width">
   <meta name="google" content="notranslate">
   <meta name="format-detection" content="telephone=no">
@@ -20,100 +22,68 @@
   <!-- endbuild -->
 </head>
 <body>
-@@include('blocks/header.html')
+@@include("./blocks/header.html", {
+hrefLogo: "#",
+hrefCatalog: "./catalog.html",
+hrefAbout: "./about.html",
+hrefBlog: "./blog.html",
+hrefAnimation: "./animation.html",
+hrefSvg: "./svg.html",
+hrefGrid: "./grid.html",
+hrefContact: "./contact.html"
+})
 
-<main class="main">
-  <section class="slider container">
-    <div class="slider__info">
-      <h1 class="slider__info__title main-title">The ooh noo collection</h1>
-      <p class="slider__info__subtitle">Designed in Slovenia</p>
-      <button class="slider__info__btn link">Explore now</button>
+<main>
+  <section class="slider-banner container">
+    <div class="slider-banner__info">
+      <h1 class="slider-banner__info__title main-title">The ooh noo collection</h1>
+      <p class="slider-banner__info__subtitle">Designed in Slovenia</p>
+      <button class="slider-banner__info__btn link">Explore now</button>
     </div>
 
-    <div class="slider__navigation">
-      <span class="slider__navigation__counter">01</span>
+    <div class="slider-banner__navigation">
+      <span class="slider-banner__navigation__counter">01</span>
 
-      <ul class="slider__navigation__list">
-        <li class="slider__navigation__item slider__navigation__item--active">
-          <button class="slider__navigation__button" aria-label="Переключить слайдер на 1"></button>
+      <ul class="slider-banner__navigation__list">
+        <li class="slider-banner__navigation__item slider-banner__navigation__item--active">
+          <button class="slider-banner__navigation__button"
+                  aria-label="Переключить слайдер на 1"></button>
         </li>
 
-        <li class="slider__navigation__item">
-          <button class="slider__navigation__button" aria-label="Переключить слайдер на 2"></button>
+        <li class="slider-banner__navigation__item">
+          <button class="slider-banner__navigation__button" aria-label="Переключить слайдер на 2"></button>
         </li>
 
-        <li class="slider__navigation__item">
-          <button class="slider__navigation__button" aria-label="Переключить слайдер на 3"></button>
+        <li class="slider-banner__navigation__item">
+          <button class="slider-banner__navigation__button" aria-label="Переключить слайдер на 3"></button>
         </li>
 
-        <li class="slider__navigation__item">
-          <button class="slider__navigation__button" aria-label="Переключить слайдер на 4"></button>
+        <li class="slider-banner__navigation__item">
+          <button class="slider-banner__navigation__button" aria-label="Переключить слайдер на 4"></button>
         </li>
       </ul>
     </div>
 
-    <p class="slider__delivery-text">Free (continental) USA shipping on all orders of $100 USD or more!</p>
+    <p class="slider-banner__delivery-text">Free (continental) USA shipping on all orders of $100 USD or more!</p>
   </section>
 
-  <section class="products-slider container">
-    <h2 class="products-slider__title title">Category Products</h2>
+  <section class="products container">
+    <h2 class="products__title title">Category Products</h2>
 
-    <ul class="products-slider__slides categories">
-      <li class="products-slider__slide categories__item">
-        <img class="products-slider__slide__img categories__img" width="280" height="270" src="./img/pullover.jpg"
-             alt="Голубая кофта с рисунками">
-        <a class="products-slider__slide__link categories__link" href="#">
-          <h3 class="products-slider__subtitle categories__subtitle">Apparel kids</h3>
-        </a>
-      </li>
+    <div class="products-slider">
+      @@include("./blocks/categories.html", {
+      classUl: "products-slider__slides "
+      })
 
-      <li class="products-slider__slide categories__item">
-        <img class="products-slider__slide__img categories__img" width="280" height="270" src="./img/sock.jpg"
-             alt="Носок цвета и формы оленя">
-        <a class="products-slider__slide__link categories__link" href="#">
-          <h3 class="products-slider__subtitle categories__subtitle">Holiday shop</h3>
-        </a>
-      </li>
-
-      <li class="products-slider__slide categories__item">
-        <img class="products-slider__slide__img categories__img" width="280" height="270" src="./img/deer.jpg"
-             alt="Игрушечный олень из дерева">
-        <a class="products-slider__slide__link categories__link" href="./pages/toys.html">
-          <h3 class="products-slider__subtitle categories__subtitle">Toys</h3>
-        </a>
-      </li>
-
-      <li class="products-slider__slide categories__item">
-        <img class="products-slider__slide__img categories__img" width="280" height="270" src="./img/snowman.jpg"
-             alt="Нарисованный человек-обезьяна на скейте">
-        <a class="products-slider__slide__link categories__link" href="#">
-          <h3 class="products-slider__subtitle categories__subtitle">Accessories</h3>
-        </a>
-      </li>
-
-      <li class="categories__item">
-        <img class="categories__img" width="280" height="270" src="./img/flamingos.jpg"
-             alt="Надувной розовый фломинго">
-        <a class="categories__link" href="#">
-          <h3 class="categories__subtitle">Sale</h3>
-        </a>
-      </li>
-
-      <li class="categories__item">
-        <img class="categories__img" width="280" height="270" src="./img/dress.jpg"
-             alt="Розовое платье с мордочками кроликов">
-        <a class="categories__link" href="#">
-          <h3 class="categories__subtitle">Apparel adults</h3>
-        </a>
-      </li>
-    </ul>
-
-    <div class="products-slider__navigation">
-      <span class="products-slider__navigation__arrow products-slider__navigation__arrow-left"></span>
-      <span class="products-slider__navigation__arrow products-slider__navigation__arrow-right"></span>
-      <p class="products-slider__navigation__text">Modern finds for the modern home. Curated goods by unique designers
-        around the
-        world from fashion to furniture for kids and adults.</p>
+      <div class="products-slider__navigation">
+        <span class="products-slider__navigation__arrow products-slider__navigation__arrow--arrow-left"
+              aria-label="Перелестнуть слайдер влево"></span>
+        <span class="products-slider__navigation__arrow products-slider__navigation__arrow--arrow-right"
+              aria-label="Перелестнуть слайдер вправо"></span>
+        <p class="products-slider__navigation__text">Modern finds for the modern home. Curated goods by unique designers
+          around the
+          world from fashion to furniture for kids and adults.</p>
+      </div>
     </div>
   </section>
 
@@ -208,48 +178,11 @@
 
 @@include('blocks/footer.html')
 
-<section class="feedback popup">
-  <h2 class="visually-hidden">Обратная связь</h2>
+@@include("blocks/feedback.html", {
+classPopup: "popup",
+classButton: "popup__close"
+})
 
-  <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post" name="form-popup">
-    <fieldset class="feedback-form__data fieldset">
-      <div class="feedback-form__wrap-input">
-        <label class="feedback-form__data__label" for="name">Name</label>
-        <input class="feedback-form__data__input" id="name" type="text" name="name">
-      </div>
-
-      <div class="feedback-form__wrap-input feedback-form__wrap-input--phone">
-        <label class="feedback-form__data__label" for="phone">Phone</label>
-        <input class="feedback-form__data__input" id="phone" type="text" name="phone">
-      </div>
-
-      <div class="feedback-form__wrap-input feedback-form__wrap-input--email">
-        <label class="feedback-form__data__label" for="email">Email</label>
-        <input class="feedback-form__data__input" id="email" type="email" name="email">
-      </div>
-
-      <div class="feedback-form__wrap-input">
-        <label class="feedback-form__data__label" for="message">Message</label>
-        <textarea class="feedback-form__data__input feedback-form__data__input--textarea" id="message"
-                  name="message"></textarea>
-      </div>
-    </fieldset>
-
-    <fieldset class="feedback-form__personal-data fieldset checkbox-wrap">
-      <input class="visually-hidden checkbox" id="agreement" type="checkbox" name="agreement">
-      <label class="feedback-form__personal-data__label checkbox__homemade" for="agreement">By clicking on the button,
-        you consent to the
-        processing of your
-        personal
-        data
-      </label>
-    </fieldset>
-
-    <button class="feedback-form__submit link" type="submit" disabled>Submit</button>
-
-    <button class="popup__close" aria-label="Закрыть попап"></button>
-  </form>
-</section>
 <script src="js/app.js" type="module" defer></script>
 </body>
 </html>

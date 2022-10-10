@@ -1,0 +1,89 @@
+/*feedback-form*/
+.feedback__form {
+  background-color: $light-grey;
+  padding: 42px 40px;
+  position: relative;
+}
+
+/*feedback-form__data*/
+.feedback__form__data {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+/*feedback-form__wrap-input*/
+.feedback__form__wrap-input {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-basis: 100%;
+}
+
+.feedback__form__wrap-input--email,
+.feedback__form__wrap-input--phone {
+  flex-basis: calc(100% / 2 - 10px);
+  margin-bottom: 2px;
+}
+
+.feedback__form__label {
+  margin-bottom: 6px;
+}
+
+.feedback__form__input {
+  border: 1px solid $border-input;
+  padding: 16px;
+
+  &:hover {
+    border: 1px solid $brow;
+  }
+
+  &:disabled {
+    border: 1px solid $footer-email;
+  }
+}
+
+.feedback__form__input::-webkit-input-placeholder {
+  color: $black-text;
+}
+
+.feedback__form__input::-moz-placeholder {
+  color: $black-text;
+}
+
+.feedback__form__input:-ms-input-placeholder {
+  color: $black-text;
+}
+
+.feedback__form__input::-ms-input-placeholder {
+  color: $black-text;
+}
+
+.feedback__form__input::placeholder {
+  color: $black-text;
+}
+
+.feedback__form__input--textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/*feedback-form__personal-data*/
+.feedback__form__personal-data {
+  font-size: 14px;
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 16px;
+}
+
+.feedback__form__personal-data__label {
+  display: block;
+
+  padding-left: 34px;
+  margin-bottom: 20px;
+}
