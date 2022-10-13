@@ -664,3 +664,644 @@
   align-self: flex-start;
   margin-top: 37px;
 }
+
+/**blog**/
+/*slider*/
+.slider__list {
+  padding: 0;
+  text-align: left;
+}
+
+.slider__item {
+  margin-bottom: 13px;
+}
+
+.slider__name {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  text-transform: inherit;
+
+  margin-bottom: 14px;
+
+  order: 3;
+}
+
+.slider__img {
+  margin-bottom: 20px;
+}
+
+.slider__time {
+  color: $text-time;
+  order: 2;
+  margin-bottom: 8px;
+}
+
+.slider__text {
+  font-size: 18px;
+  line-height: 25px;
+
+  order: 3;
+}
+
+/*slider__controls*/
+.slider__controls {
+  padding: 39px 5px 63px;
+}
+
+/**animation**/
+.animation {
+  width: 100%;
+  position: relative;
+
+  padding-top: 8%;
+  margin-bottom: 50px;
+
+  overflow: hidden;
+}
+
+.animation__city {
+  width: 100%;
+}
+
+.animation__sun {
+  position: absolute;
+  width: 3.2%;
+  top: 0;
+  right: 22%;
+}
+
+/*clouds*/
+.animation__clouds {
+  position: absolute;
+  width: 100%;
+}
+
+.animation__clouds--1 {
+  top: 0;
+
+  animation: clouds-1 50s linear infinite;
+}
+
+@keyframes clouds-1 {
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+.animation__clouds--2 {
+  top: 0;
+  left: -100%;
+
+  animation: clouds-2 50s linear infinite;
+}
+
+@keyframes clouds-2 {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+/*lantern*/
+.animation__lantern-off-left,
+.animation__lantern-off-right {
+  position: absolute;
+  top: 30%;
+
+  width: 8%;
+
+  z-index: 4;
+}
+
+.animation__lantern-off-left {
+  left: 36%;
+}
+
+.animation__lantern-off-right {
+  right: 10%;
+}
+
+.animation__lantern-on {
+  position: absolute;
+  right: 21.6%;
+  top: 33%;
+
+  width: 11.2%;
+
+  z-index: 5;
+}
+
+/*car-wrap*/
+.animation__car-wrap {
+  position: absolute;
+}
+
+.animation__car-wrap--1 {
+  top: 58%;
+  left: 10%;
+
+  width: 13.4%;
+
+  animation: wrap-1 6s linear infinite;
+
+  z-index: 4;
+}
+
+@keyframes wrap-1 {
+  75% {
+    opacity: 1;
+  }
+
+  76% {
+    left: 102%;
+    opacity: 0;
+  }
+
+  76.1% {
+    left: -20%;
+    opacity: 1;
+  }
+
+  100% {
+    left: 10%;
+  }
+}
+
+.animation__car-wrap--2 {
+  left: -20%;
+  top: 55%;
+
+  width: 10.9%;
+
+  animation: wrap-2 8s linear infinite;
+
+  z-index: 1;
+}
+
+@keyframes wrap-2 {
+  55% {
+    opacity: 1;
+  }
+
+  99.8% {
+    opacity: 1;
+  }
+
+  99.9% {
+    left: 102%;
+    opacity: 0;
+  }
+
+  100% {
+    left: -20%;
+    opacity: 1;
+  }
+}
+
+.animation__car-wrap--3 {
+  top: 62%;
+  left: 51%;
+
+  width: 13.1%;
+
+  animation: wrap-3 7s linear infinite;
+
+  z-index: 3;
+}
+
+@keyframes wrap-3 {
+  45% {
+    opacity: 1;
+  }
+
+  46% {
+    left: 102%;
+    opacity: 0;
+  }
+
+  46.1% {
+    left: -20%;
+    opacity: 1;
+  }
+
+  100% {
+    left: 51%;
+  }
+}
+
+.animation__car-wrap--4 {
+  top: 53%;
+  left: 71%;
+
+  width: 14.3%;
+
+  animation: wrap-4 9s linear infinite;
+
+  z-index: 2;
+}
+
+@keyframes wrap-4 {
+  25% {
+    opacity: 1;
+  }
+
+  26% {
+    left: 102%;
+    opacity: 0;
+  }
+
+  26.1% {
+    left: -20%;
+    opacity: 1;
+  }
+
+  100% {
+    left: 71%;
+  }
+}
+
+/*car*/
+.animation__car {
+  width: 100%;
+}
+
+/*wheel*/
+.animation__wheel {
+  position: absolute;
+  animation: wheel 1s linear infinite;
+}
+
+@keyframes wheel {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animation__wheel--car-1-left,
+.animation__wheel--car-1-right {
+  width: 17.9%;
+  top: 73%;
+}
+
+.animation__wheel--car-1-left {
+  left: 14%;
+}
+
+.animation__wheel--car-1-right {
+  right: 10%;
+}
+
+.animation__wheel--car-2-left,
+.animation__wheel--car-2-right {
+  width: 16.1%;
+  top: 74%;
+}
+
+.animation__wheel--car-2-left {
+  left: 8%;
+}
+
+.animation__wheel--car-2-right {
+  right: 8%;
+}
+
+
+.animation__wheel--car-3-left,
+.animation__wheel--car-3-right {
+  width: 13%;
+  top: 65%;
+}
+
+.animation__wheel--car-3-left {
+  left: 11%;
+}
+
+.animation__wheel--car-3-right {
+  right: 11%;
+}
+
+
+.animation__wheel--car-4-left,
+.animation__wheel--car-4-right {
+  width: 19%;
+  top: 76%;
+}
+
+.animation__wheel--car-4-left {
+  left: 13%;
+}
+
+.animation__wheel--car-4-right {
+  right: 9%;
+}
+
+/*taxi*/
+.animation__taxi-wrap {
+  position: absolute;
+  right: -50%;
+  top: 58%;
+
+  width: 46.61%;
+
+  z-index: 4;
+
+  animation: taxi 15s linear infinite 4s;
+}
+
+@keyframes taxi {
+  25% {
+    right: 10%;
+  }
+
+  50% {
+    right: 10%;
+  }
+
+  80% {
+    right: 120%;
+  }
+
+  100% {
+    right: 120%;
+  }
+}
+
+.animation__taxi {
+  width: 100%;
+}
+
+.animation__wheel-taxi {
+  position: absolute;
+  width: 12.5%;
+
+  animation: wheel-taxi 15s linear infinite 4s;
+}
+
+@keyframes wheel-taxi {
+  24.9% {
+    transform: rotate(-2000deg);
+  }
+
+  25% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-4000deg);
+  }
+}
+
+.animation__wheel--taxi-left,
+.animation__wheel--taxi-right {
+  top: 76%;
+}
+
+.animation__wheel--taxi-left {
+  left: 13%;
+}
+
+.animation__wheel--taxi-right {
+  right: 16%;
+}
+
+.animation__taxi-message {
+  position: absolute;
+  top: -26%;
+  left: 35%;
+
+  width: 19.11%;
+
+  opacity: 0;
+
+  animation: taxi-message 15s linear infinite 4s;
+}
+
+@keyframes taxi-message {
+  26% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  44% {
+    opacity: 0;
+  }
+}
+
+/*woman*/
+.animation__woman-wrap {
+  position: absolute;
+  top: 67%;
+  left: 17%;
+
+  width: 10.1%;
+
+  z-index: 5;
+}
+
+.animation__woman {
+  width: 100%;
+  position: relative;
+}
+
+.animation__woman-skirt {
+  position: absolute;
+  top: 47%;
+  left: 5%;
+  width: 51%;
+
+  z-index: 6;
+}
+
+.animation__woman-hand {
+  position: absolute;
+  top: 41%;
+  left: 19%;
+
+  width: 33.31%;
+  z-index: 5;
+
+  transform-origin: 15% 25%;
+
+  animation: woman-hand 15s linear infinite;
+}
+
+@keyframes woman-hand {
+  15% {
+    transform: rotate(0);
+  }
+
+  20% {
+    transform: rotate(-45deg);
+  }
+
+  30% {
+    transform: rotate(-45deg);
+  }
+
+  35% {
+    transform: rotate(0);
+  }
+
+}
+
+.animation__woman-message {
+  position: absolute;
+  top: -40%;
+  left: -45%;
+
+  width: 88%;
+
+  opacity: 0;
+
+  animation: woman-message 15s linear infinite;
+}
+
+@keyframes woman-message {
+  15% {
+    opacity: 0;
+  }
+
+  19% {
+    opacity: 1;
+  }
+
+  29% {
+    opacity: 1;
+  }
+
+  33% {
+    opacity: 0;
+  }
+}
+
+/*man*/
+.animation__man-wrap {
+  position: absolute;
+  top: 57%;
+  left: 23.5%;
+
+  width: 10.77%;
+
+  z-index: 4;
+}
+
+.animation__man {
+  width: 100%;
+  position: relative;
+
+  z-index: 4;
+}
+
+.animation__man-hand {
+  position: absolute;
+  top: -12%;
+  left: 0;
+
+  width: 43.43%;
+
+  z-index: 3;
+
+  transform-origin: 11% 92%;
+  transform: rotate(151deg);
+
+  animation: man-hand 15s linear infinite;
+}
+
+@keyframes man-hand {
+  29% {
+    transform: rotate(151deg);
+  }
+
+  36% {
+    transform: rotate(0deg);
+  }
+
+  42% {
+    transform: rotate(0deg);
+  }
+
+  49% {
+    transform: rotate(151deg);
+  }
+}
+
+.animation__man-message,
+.animation__man-message-2 {
+  position: absolute;
+  top: -23%;
+  left: -7%;
+
+  width: 81.98%;
+
+  opacity: 0;
+
+  z-index: 6;
+}
+
+.animation__man-message {
+  animation: man-message 15s linear infinite;
+}
+
+@keyframes man-message {
+  29% {
+    opacity: 0;
+  }
+
+  33% {
+    opacity: 1;
+  }
+
+  43% {
+    opacity: 1;
+  }
+
+  47% {
+    opacity: 0;
+  }
+}
+
+.animation__man-message-2 {
+  animation: man-message-2 15s linear infinite;
+}
+
+@keyframes man-message-2 {
+  78% {
+    opacity: 0;
+  }
+
+  82% {
+    opacity: 1;
+  }
+
+  92% {
+    opacity: 1;
+  }
+
+  96% {
+    opacity: 0;
+  }
+}

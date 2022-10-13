@@ -96,7 +96,7 @@
   height: 0;
   border: 0 solid $basic-black;
   border-radius: 10px;
-  transition: 0.5s;
+  transition: 0.4s;
   transition-timing-function: ease-in;
 }
 
@@ -107,8 +107,6 @@
   border: 2px solid $basic-black;
   margin: -2px;
   padding: 10px;
-  transition: 0.5s, border-width 0s;
-  transition-timing-function: ease-in;
 }
 
 .header__search-submit {
