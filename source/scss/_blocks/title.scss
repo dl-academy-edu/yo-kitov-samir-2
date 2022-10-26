@@ -1,7 +1,12 @@
 .title {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: $montserrat;
   font-weight: 700;
   font-size: 38px;
   line-height: 46px;
   text-transform: uppercase;
+
+  @media (max-width: $media-tablet) {
+    font-size: 36px;
+    line-height: 44px;
+  }
 }

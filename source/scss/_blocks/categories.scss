@@ -1,7 +1,8 @@
 .categories {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  column-gap: 20px;
+  row-gap: 22px;
 }
 
 .categories__item {
@@ -10,6 +11,16 @@
   max-width: 280px;
   height: 270px;
   background-color: $brow;
+
+  @media (max-width: $media-tablet) {
+    min-width: 258px;
+    max-width: 258px;
+    height: 249px;
+  }
+}
+
+.categories__img {
+  object-position: 0 0;
 }
 
 .categories__link {
@@ -26,7 +37,7 @@
 }
 
 .categories__subtitle {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: $montserrat;
   font-weight: 700;
   font-size: 26px;
   line-height: 32px;

@@ -14,7 +14,7 @@ body {
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
 
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: $open;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;

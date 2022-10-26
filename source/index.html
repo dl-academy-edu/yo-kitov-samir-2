@@ -8,6 +8,10 @@
   <meta name="google" content="notranslate">
   <meta name="format-detection" content="telephone=no">
 
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@200;300;600;700&family=Lato:wght@700&family=Open+Sans:wght@400;700&family=Roboto&display=swap"
+    rel="stylesheet">
+
   <title>DL Academy</title>
 
   <script>
@@ -34,37 +38,39 @@ hrefContact: "./contact.html"
 })
 
 <main>
-  <section class="slider-banner container">
-    <div class="slider-banner__info">
-      <h1 class="slider-banner__info__title main-title">The ooh noo collection</h1>
-      <p class="slider-banner__info__subtitle">Designed in Slovenia</p>
-      <button class="slider-banner__info__btn link">Explore now</button>
+  <section class="container">
+    <div class="slider-banner">
+      <div class="slider-banner__info">
+        <h1 class="slider-banner__info__title main-title">The ooh noo collection</h1>
+        <p class="slider-banner__info__subtitle">Designed in Slovenia</p>
+        <button class="slider-banner__info__btn link">Explore now</button>
+      </div>
+
+      <div class="slider-banner__navigation">
+        <span class="slider-banner__navigation__counter">01</span>
+
+        <ul class="slider-banner__navigation__list">
+          <li class="slider-banner__navigation__item slider-banner__navigation__item--active">
+            <button class="slider-banner__navigation__button"
+                    aria-label="Переключить слайдер на 1"></button>
+          </li>
+
+          <li class="slider-banner__navigation__item">
+            <button class="slider-banner__navigation__button" aria-label="Переключить слайдер на 2"></button>
+          </li>
+
+          <li class="slider-banner__navigation__item">
+            <button class="slider-banner__navigation__button" aria-label="Переключить слайдер на 3"></button>
+          </li>
+
+          <li class="slider-banner__navigation__item">
+            <button class="slider-banner__navigation__button" aria-label="Переключить слайдер на 4"></button>
+          </li>
+        </ul>
+      </div>
+
+      <p class="slider-banner__delivery-text">Free (continental) USA shipping on all orders of $100 USD or more!</p>
     </div>
-
-    <div class="slider-banner__navigation">
-      <span class="slider-banner__navigation__counter">01</span>
-
-      <ul class="slider-banner__navigation__list">
-        <li class="slider-banner__navigation__item slider-banner__navigation__item--active">
-          <button class="slider-banner__navigation__button"
-                  aria-label="Переключить слайдер на 1"></button>
-        </li>
-
-        <li class="slider-banner__navigation__item">
-          <button class="slider-banner__navigation__button" aria-label="Переключить слайдер на 2"></button>
-        </li>
-
-        <li class="slider-banner__navigation__item">
-          <button class="slider-banner__navigation__button" aria-label="Переключить слайдер на 3"></button>
-        </li>
-
-        <li class="slider-banner__navigation__item">
-          <button class="slider-banner__navigation__button" aria-label="Переключить слайдер на 4"></button>
-        </li>
-      </ul>
-    </div>
-
-    <p class="slider-banner__delivery-text">Free (continental) USA shipping on all orders of $100 USD or more!</p>
   </section>
 
   <section class="products container">
@@ -144,35 +150,37 @@ hrefContact: "./contact.html"
     </ul>
   </section>
 
-  <section class="about-us container">
-    <h2 class="visually-hidden">О нас</h2>
-    <section class="about-us__section about-info">
-      <h2 class="about-us__title about-info__title title">Design Life Kids</h2>
-      <p class="about-info__subtitle">About Us</p>
-      <p class="about-us__text about-info__text">Some days i feel like i've been working on dlk my entire life and
-        there are
-        other days that i am completely
-        shocked that four years have flown by. It's simply magical.
-      </p>
-      <a class="about-info__link link" href="#">buy now</a>
-    </section>
+  <section class="container">
+    <div class="about-us">
+      <h2 class="visually-hidden">О нас</h2>
+      <section class="about-us__section">
+        <h2 class="about-us__title about-info__title title">Design Life Kids</h2>
+        <p class="about-info__subtitle">About Us</p>
+        <p class="about-us__text about-info__text">Some days i feel like i've been working on dlk my entire life and
+          there are
+          other days that i am completely
+          shocked that four years have flown by. It's simply magical.
+        </p>
+        <a class="about-info__link link" href="#">buy now</a>
+      </section>
 
-    <section class="about-us__section about-contacts">
-      <h2 class="about-us__title about-contacts__title title">Contacts</h2>
-      <p class="about-us__text about-contacts__text">Some days i feel like i've been working on dlk my
-        entire life and there are
-        other days that
-        i am completely shocked that four years have flown by.
-        It's simply
-        magical.
-      </p>
-      <iframe
-        class="about-contacts__map"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2372.55952593754!2d49.291391321961534!3d53.51206341960009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x416879a82611632d%3A0xb18d94ffcf91e387!2zREwgQWNhZGVteSDigJQg0LrRg9GA0YHRiyDQv9GA0L7Qs9GA0LDQvNC80LjRgNC-0LLQsNC90LjRjw!5e0!3m2!1sru!2sru!4v1660855245437!5m2!1sru!2sru"
-        width="483" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade" aria-label="Карта">
-      </iframe>
-    </section>
+      <section class="about-us__section">
+        <h2 class="about-us__title about-contacts__title title">Contacts</h2>
+        <p class="about-us__text about-contacts__text">Some days i feel like i've been working on dlk my
+          entire life and there are
+          other days that
+          i am completely shocked that four years have flown by.
+          It's simply
+          magical.
+        </p>
+        <iframe
+          class="about-contacts__map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2372.55952593754!2d49.291391321961534!3d53.51206341960009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x416879a82611632d%3A0xb18d94ffcf91e387!2zREwgQWNhZGVteSDigJQg0LrRg9GA0YHRiyDQv9GA0L7Qs9GA0LDQvNC80LjRgNC-0LLQsNC90LjRjw!5e0!3m2!1sru!2sru!4v1660855245437!5m2!1sru!2sru"
+          width="483" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" aria-label="Карта">
+        </iframe>
+      </section>
+    </div>
   </section>
 </main>
 

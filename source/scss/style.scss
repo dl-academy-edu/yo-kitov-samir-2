@@ -53,19 +53,30 @@
   display: flex;
   flex-wrap: wrap;
 
-  background: url(../img/monster.png) no-repeat 82% -1px, linear-gradient($basic-white 18%, $bg-slider 18%);
+  background: url(../img/monster.png) no-repeat left 82% bottom 9px, linear-gradient($basic-white 18%, $bg-slider 18%);
+  background-size: 54%;
 
   padding-top: 105px;
+
+  @media (max-width: $media-tablet) {
+    padding-top: 16px;
+    background: url(../img/monster.png) no-repeat left 97% bottom 27px, $bg-slider;
+    background-size: 59.5%;
+  }
 }
 
 /*slider-banner navigation*/
 .slider-banner__navigation {
   margin: 0 44px 0 30px;
   order: 1;
+
+  @media (max-width: $media-tablet) {
+    margin: 0 12px 0 0;
+  }
 }
 
 .slider-banner__navigation__counter {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: $montserrat;
   font-weight: 200;
   font-size: 60px;
   line-height: 73px;
@@ -73,10 +84,22 @@
   display: inline-block;
   margin-bottom: 10px;
   opacity: 0.05;
+
+  @media (max-width: $media-tablet) {
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 59px;
+
+    margin-bottom: 5px;
+  }
 }
 
 .slider-banner__navigation__list {
   margin: 1px 0 0 2px;
+
+  @media (max-width: $media-tablet) {
+    margin: 0;
+  }
 }
 
 .slider-banner__navigation__item {
@@ -92,6 +115,11 @@
   cursor: pointer;
 
   transition: background-color 0.4s, opacity 0.4s;
+
+  @media (max-width: $media-tablet) {
+    width: 27px;
+    margin-bottom: 9px;
+  }
 }
 
 .slider-banner__navigation__item--active .slider-banner__navigation__button {
@@ -102,10 +130,11 @@
 /*slider-banner info*/
 .slider-banner__info {
   padding: 0 28px 89px 0;
-  flex-grow: 1;
   order: 2;
 
-  max-width: 583px;
+  @media (max-width: $media-tablet) {
+    padding: 0 28px 102px 0;
+  }
 }
 
 .slider-banner__info__title {
@@ -116,15 +145,26 @@
 
   margin-bottom: 18px;
   margin-top: 74px;
+
+  max-width: 486px;
+
+  @media (max-width: $media-tablet) {
+    margin-top: 63px;
+    margin-bottom: 16px;
+  }
 }
 
 .slider-banner__info__subtitle {
-  font-family: 'Crimson Text', Arial, serif;
+  font-family: $crimson;
   font-size: 20px;
   line-height: 26px;
   font-style: italic;
 
   margin-bottom: 20px;
+
+  @media (max-width: $media-tablet) {
+    margin-bottom: 21px;
+  }
 }
 
 /*slider-banner__delivery*/
@@ -145,11 +185,19 @@
 
 /*.products*/
 .products {
-  padding: 92px 0 89px;
+  padding: 92px 0 89px 60px;
+
+  @media (max-width: $media-tablet) {
+    padding: 61px 0 89px 60px;
+  }
 }
 
 .products__title {
-  margin-bottom: 30px;
+  margin-bottom: 31px;
+
+  @media (max-width: $media-tablet) {
+    margin-bottom: 24px;
+  }
 }
 
 /*.products-slider*/
@@ -159,6 +207,10 @@
   min-height: 345px;
   display: flex;
   align-items: flex-end;
+
+  @media (max-width: $media-tablet) {
+    min-height: 314px;
+  }
 }
 
 .products-slider__slides {
@@ -176,8 +228,8 @@
 
 .products-slider__navigation__arrow {
   display: inline-block;
-  width: 37px;
-  height: 37px;
+  min-width: 37px;
+  min-height: 37px;
   background-color: $light-blue;
   position: relative;
   cursor: pointer;
@@ -203,6 +255,10 @@
   &:before {
     transform: translate(75%, -50%) rotate(-135deg);
   }
+
+  @media (max-height: $media-tablet) {
+    margin-right: 3px;
+  }
 }
 
 .products-slider__navigation__arrow--arrow-right {
@@ -213,13 +269,21 @@
 
 .products-slider__navigation {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+
   margin-top: 31px;
 }
 
 .products-slider__navigation__text {
   margin: 0 20px;
   max-width: 595px;
+
+  @media (max-width: $media-tablet) {
+    font-size: 14px;
+    line-height: 19px;
+
+    max-width: 575px;
+  }
 }
 
 /*services*/
@@ -245,7 +309,7 @@
 }
 
 .services__list-item__button {
-  font-family: 'Crimson Text', Arial, serif;
+  font-family: $crimson;
   text-align: start;
   font-style: italic;
   font-size: 26px;
@@ -278,6 +342,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 127px;
 
   margin: 89px 0;
@@ -285,19 +350,19 @@
 
 /*about-us*/
 .about-us {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 57px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 542px));
+  grid-gap: 57px;
+  align-items: start;
 
-  padding-bottom: 155px;
+  padding-bottom: 149px;
 }
 
 /*about-us__section*/
 .about-us__section {
   background: linear-gradient($basic-white 29px, $light-blue 29px);
-  flex-basis: 46%;
-  padding: 3px 31px 27px;
+
+  padding: 3px 31px 33px;
 }
 
 .about-us__title {
@@ -305,7 +370,7 @@
 }
 
 .about-info__subtitle {
-  font-family: 'Crimson Text', Arial, serif;
+  font-family: $crimson;
   font-style: italic;
   font-size: 26px;
   line-height: 34px;
@@ -323,11 +388,12 @@
 }
 
 .about-contacts__text {
-  margin-bottom: 29px;
+  margin-bottom: 17px;
 }
 
 .about-contacts__map {
   margin-bottom: -156px;
+  width: 100%;
 }
 
 /*popup*/
@@ -394,7 +460,7 @@
 /**catalog**/
 /*categories*/
 .category-products .categories {
-  margin-bottom: 59px;
+  margin-bottom: 53px;
 }
 
 .category-products .categories__item:nth-child(7n-3) {
@@ -403,7 +469,7 @@
 
 /*product-description*/
 .product-description {
-  padding: 0 0 40px 200px;
+  padding: 0 0 44px 260px;
 }
 
 .product-description__title {
@@ -469,7 +535,7 @@
 }
 
 .feedback-description__title {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: $montserrat;
   font-style: normal;
   font-weight: 600;
   font-size: 26px;
@@ -494,7 +560,8 @@
 .options__form {
   display: flex;
   flex-wrap: wrap;
-  padding: 42px 0 28px;
+  padding: 42px 60px 28px;
+  margin: 0 auto 59px;
 }
 
 .options__form__slider-wrap {
@@ -663,51 +730,6 @@
 .options__form__submit {
   align-self: flex-start;
   margin-top: 37px;
-}
-
-/**blog**/
-/*slider*/
-.slider__list {
-  padding: 0;
-  text-align: left;
-}
-
-.slider__item {
-  margin-bottom: 13px;
-}
-
-.slider__name {
-  font-family: 'Montserrat', Arial, sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 31px;
-  text-transform: inherit;
-
-  margin-bottom: 14px;
-
-  order: 3;
-}
-
-.slider__img {
-  margin-bottom: 20px;
-}
-
-.slider__time {
-  color: $text-time;
-  order: 2;
-  margin-bottom: 8px;
-}
-
-.slider__text {
-  font-size: 18px;
-  line-height: 25px;
-
-  order: 3;
-}
-
-/*slider__controls*/
-.slider__controls {
-  padding: 39px 5px 63px;
 }
 
 /**animation**/
@@ -1226,14 +1248,14 @@
   z-index: 3;
 
   transform-origin: 11% 92%;
-  transform: rotate(151deg);
+  transform: rotate(149deg);
 
   animation: man-hand 15s linear infinite;
 }
 
 @keyframes man-hand {
   29% {
-    transform: rotate(151deg);
+    transform: rotate(149deg);
   }
 
   36% {
@@ -1245,7 +1267,7 @@
   }
 
   49% {
-    transform: rotate(151deg);
+    transform: rotate(149deg);
   }
 }
 

@@ -3,13 +3,20 @@
   flex-wrap: wrap;
   gap: 20px;
   text-align: center;
-  padding-top: 59px;
+}
+
+.slider__list--blog {
+  text-align: left;
 }
 
 .slider__item {
   display: flex;
   flex-direction: column;
   max-width: 380px;
+}
+
+.slider__item--blog {
+  margin-bottom: 13px;
 }
 
 .slider__name {
@@ -23,8 +30,37 @@
   text-transform: uppercase;
 }
 
+.slider__name--blog {
+  font-family: $montserrat;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  text-transform: inherit;
+
+  margin-bottom: 14px;
+
+  order: 3;
+}
+
 .slider__img {
   margin-bottom: 30px;
+}
+
+.slider__img--blog {
+  margin-bottom: 20px;
+}
+
+.slider__time {
+  color: $text-time;
+  order: 2;
+  margin-bottom: 8px;
+}
+
+.slider__text {
+  font-size: 18px;
+  line-height: 25px;
+
+  order: 3;
 }
 
 .slider__prise {
@@ -39,6 +75,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 49px 5px 63px;
+}
+
+.slider__controls--blog {
+  padding: 39px 5px 63px
 }
 
 .slider__controls__dots {
@@ -82,7 +122,7 @@
 }
 
 .slider__controls__button {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: $montserrat;
   line-height: 20px;
   font-weight: 700;
   transition: 0.4s;

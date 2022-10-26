@@ -7,7 +7,7 @@
 
 /*feedback-form__data*/
 .feedback__form__data {
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: $roboto;
   font-size: 14px;
   line-height: 16px;
 
@@ -39,7 +39,7 @@
 .feedback__form__input {
   border: 1px solid $border-input;
   padding: 16px;
-  transition: 0.4s;
+  transition: border 0.4s;
 
   &:hover {
     border: 1px solid $brow;
@@ -78,7 +78,7 @@
 /*feedback-form__personal-data*/
 .feedback__form__personal-data {
   font-size: 14px;
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: $roboto;
   line-height: 16px;
 }
 
