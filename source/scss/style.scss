@@ -188,7 +188,7 @@
   padding: 92px 0 89px 60px;
 
   @media (max-width: $media-tablet) {
-    padding: 61px 0 89px 60px;
+    padding: 61px 0 61px 60px;
   }
 }
 
@@ -294,8 +294,8 @@
 }
 
 .services__inner-wrap {
-  flex-basis: 609px;
-  padding-left: 122px;
+  flex-basis: 52%;
+  padding-left: 10.7%;
 
   order: 1;
 }
@@ -331,6 +331,10 @@
 
 .services__link {
   margin-top: 11px;
+}
+
+.services__img-wrap {
+  width: 41.6%;
 }
 
 .services__img {

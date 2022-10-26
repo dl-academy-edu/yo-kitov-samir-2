@@ -125,8 +125,14 @@ hrefContact: "./contact.html"
       <a class="services__link link" href="#">Learn more</a>
     </div>
 
-    <img class="services__img" width="480" height="559" src="./img/delivery_woman.jpg"
-         alt="Девушка с татуировкой на левой руке, светлыми волосами и в белом платье с квадратиками на нём">
+    <div class="services__img-wrap">
+      <picture>
+        <source class="services__img" width="258" height="512" media="(max-width: 768px)" srcset="./img/delivery_woman_tablet.jpg">
+
+        <img class="services__img" width="480" height="559" src="./img/delivery_woman.jpg"
+             alt="Девушка с татуировкой на левой руке, светлыми волосами и в белом платье с квадратиками на нём">
+      </picture>
+    </div>
   </section>
 
   <section class="partners container">
