@@ -298,14 +298,27 @@
   padding-left: 10.7%;
 
   order: 1;
+
+  @media (max-width: $media-tablet) {
+    padding-left: 9.3%;
+    flex-basis: 58%;
+  }
 }
 
 .services__list {
   margin-bottom: 23px;
+
+  @media (max-width: $media-tablet) {
+    margin-bottom: 18px;
+  }
 }
 
 .services__title {
   margin: 31px 0 5px;
+
+  @media (max-width: $media-tablet) {
+    margin: 29px 0 5px;
+  }
 }
 
 .services__list-item__button {
@@ -318,6 +331,15 @@
   min-width: 326px;
   padding: 10px 60px 9px;
   margin: 1px 0 0 -60px;
+
+  @media (max-width: $media-tablet) {
+    font-size: 24px;
+    line-height: 31px;
+
+    margin: 0 0 0 -21px;
+    min-width: 268px;
+    padding: 8px 21px 5px;
+  }
 }
 
 .services__list-item--active .services__list-item__button {
@@ -327,6 +349,10 @@
 
 .services__text {
   margin-bottom: 15px;
+
+  &:nth-last-of-type(1) {
+    margin-bottom: 10px;
+  }
 }
 
 .services__link {
