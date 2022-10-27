@@ -350,8 +350,13 @@
 .services__text {
   margin-bottom: 15px;
 
-  &:nth-last-of-type(1) {
-    margin-bottom: 10px;
+  @media (max-width: $media-tablet) {
+    font-size: 14px;
+    line-height: 19px;
+
+    &:nth-last-of-type(1) {
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -365,6 +370,7 @@
 
 .services__img {
   background-color: $light-blue;
+  object-fit: cover;
 }
 
 /*partners*/
@@ -372,10 +378,43 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
   gap: 127px;
 
   margin: 89px 0;
+
+  @media (max-width: $media-tablet) {
+    margin: 60px 0 82px;
+
+    gap: 69px
+  }
+}
+
+.partners__list-img-mail {
+  @media (max-width: $media-tablet) {
+    width: 106px;
+    height: 33px;
+  }
+}
+
+.partners__list-img-apple {
+  @media (max-width: $media-tablet) {
+    width: 98px;
+    height: 34px;
+  }
+}
+
+.partners__list-img-eltex {
+  @media (max-width: $media-tablet) {
+    width: 119px;
+    height: 25px;
+  }
+}
+
+.partners__list-img-owox {
+  @media (max-width: $media-tablet) {
+    width: 116px;
+    height: 22px;
+  }
 }
 
 /*about-us*/
@@ -386,6 +425,13 @@
   align-items: start;
 
   padding-bottom: 149px;
+
+  @media (max-width: $media-tablet) {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 314px));
+    grid-gap: 20px;
+
+    padding-bottom: 127px;
+  }
 }
 
 /*about-us__section*/
@@ -393,10 +439,21 @@
   background: linear-gradient($basic-white 29px, $light-blue 29px);
 
   padding: 3px 31px 33px;
+
+  @media (max-width: $media-tablet) {
+    padding: 3px 15px 33px;
+  }
 }
 
 .about-us__title {
   margin-bottom: 8px;
+
+  @media (max-width: $media-tablet) {
+    font-size: 30px;
+    line-height: 37px;
+
+    margin-bottom: 14px;
+  }
 }
 
 .about-info__subtitle {
@@ -410,11 +467,19 @@
 
 .about-info__link {
   margin-top: 21px;
+
+  @media (max-width: $media-tablet) {
+    margin-top: 18px;
+  }
 }
 
 /*about-contacts*/
 .about-contacts__title {
   margin-bottom: 20px;
+
+  @media (max-width: $media-tablet) {
+    margin-bottom: 24px;
+  }
 }
 
 .about-contacts__text {
