@@ -41,7 +41,7 @@ hrefContact: "./contact.html"
   <section class="container">
     <div class="slider-banner">
       <div class="slider-banner__info">
-        <h1 class="slider-banner__info__title main-title">The ooh noo collection</h1>
+        <h1 class="slider-banner__info__title">The ooh noo collection</h1>
         <p class="slider-banner__info__subtitle">Designed in Slovenia</p>
         <button class="slider-banner__info__btn link">Explore now</button>
       </div>
@@ -127,9 +127,11 @@ hrefContact: "./contact.html"
 
     <div class="services__img-wrap">
       <picture>
-        <source class="services__img" width="258" height="512" media="(max-width: 768px)" srcset="./img/delivery_woman_tablet.jpg">
-
-        <img class="services__img" width="480" height="559" src="./img/delivery_woman.jpg"
+        <source class="services__img" width="335" height="357" media="(max-width: 767px)"
+                srcset="./img/delivery_woman_mobile.jpg, ./img/delivery_woman_mobile@x2.jpg 2x">
+        <source class="services__img" width="258" height="512" media="(max-width: 768px)"
+                srcset="./img/delivery_woman_tablet.jpg, ./img/delivery_woman_tablet@x2.jpg 2x">
+        <img class="services__img" width="480" height="559" src="./img/delivery_woman.jpg" srcset="./img/delivery_woman@x2.jpg 2x"
              alt="Девушка с татуировкой на левой руке, светлыми волосами и в белом платье с квадратиками на нём">
       </picture>
     </div>
@@ -138,20 +140,20 @@ hrefContact: "./contact.html"
   <section class="partners container">
     <h2 class="visually-hidden">Партнеры</h2>
     <ul class="partners__list">
-      <li class="partners__list-item">
-        <img class="partners__list-img-mail" src="./img/mail.png" width="193" height="61" alt="Логотип партнёра mail" class="partners__img">
+      <li class="partners__list-item partners__list-item--mail">
+        <img class="partners__list-img partners__list-img--mail" src="./img/mail.png" width="193" height="61" alt="Логотип партнёра mail" class="partners__img">
       </li>
 
-      <li class="partners__list-item">
-        <img class="partners__list-img-apple" src="./img/apple.png" width="179" height="61" alt="Логотип партнёра apple" class="partners__img">
+      <li class="partners__list-item partners__list-item--apple">
+        <img class="partners__list-img partners__list-img--apple" src="./img/apple.png" width="179" height="61" alt="Логотип партнёра apple" class="partners__img">
       </li>
 
-      <li class="partners__list-item">
-        <img class="partners__list-img-eltex" src="./img/eltex.png" width="216" height="46" alt="Логотип партнёра eltex" class="partners__img">
+      <li class="partners__list-item partners__list-item--eltex">
+        <img class="partners__list-img partners__list-img--eltex" src="./img/eltex.png" width="216" height="46" alt="Логотип партнёра eltex" class="partners__img">
       </li>
 
-      <li class="partners__list-item">
-        <img class="partners__list-img-owox" src="./img/owox.png" width="211" height="40" alt="Логотип партнёра owox" class="partners__img">
+      <li class="partners__list-item partners__list-item--owox">
+        <img class="partners__list-img partners__list-img--owox" src="./img/owox.png" width="211" height="40" alt="Логотип партнёра owox" class="partners__img">
       </li>
     </ul>
   </section>

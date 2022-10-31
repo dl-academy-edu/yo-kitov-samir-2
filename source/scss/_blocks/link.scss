@@ -26,4 +26,11 @@
     color: $text-disabled;
     background-color: $button-form-disabled;
   }
+
+  @media (max-width: $media-mobile) {
+    padding: 8px 20px;
+
+    font-size: 14px;
+    line-height: 19px;
+  }
 }

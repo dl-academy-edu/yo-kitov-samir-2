@@ -3,19 +3,26 @@
   flex-wrap: wrap;
   column-gap: 20px;
   row-gap: 22px;
+
+  @media (max-width: $media-mobile) {
+    column-gap: 16px;
+  }
 }
 
 .categories__item {
   position: relative;
   min-width: 280px;
-  max-width: 280px;
   height: 270px;
   background-color: $brow;
 
   @media (max-width: $media-tablet) {
     min-width: 258px;
-    max-width: 258px;
     height: 249px;
+  }
+
+  @media (max-width: $media-mobile) {
+    height: 238px;
+    min-width: 247px;
   }
 }
 
@@ -35,6 +42,11 @@
     text-decoration-color: $basic-white;
   }
 }
+
+.categories__link {
+  @media (max-width: $media-mobile) {
+    margin-top: 5px;
+  }}
 
 .categories__subtitle {
   font-family: $montserrat;

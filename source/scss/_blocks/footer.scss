@@ -15,6 +15,11 @@
     column-gap: 19px;
     padding: 80px 60px;
   }
+
+  @media (max-width: $media-mobile) {
+    padding: 70px 21px;
+    gap: 25px;
+  }
 }
 
 /*footer__navigation*/
@@ -24,6 +29,14 @@
 
   @media (max-width: $media-tablet) {
     max-width: 203px;
+  }
+
+  @media (max-width: $media-mobile) {
+    max-width: 100%;
+
+    &:nth-child(2) {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -36,6 +49,21 @@
   margin-bottom: 29px;
 
   position: relative;
+
+  @media (max-width: $media-mobile) {
+    font-size: 16px;
+    line-height: 22px;
+
+    padding-bottom: 21px;
+    margin-bottom: 20px;
+  }
+}
+
+.footer__navigation__title--connect {
+  @media (max-width: $media-mobile) {
+    padding-bottom: 24px;
+    margin-bottom: 28px;
+  }
 }
 
 .footer__navigation__title::before {
@@ -51,8 +79,40 @@
   left: 0;
 }
 
+.footer__navigation__list {
+  @media (max-width: $media-mobile) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 150px);
+    grid-column-gap: 25px;
+  }
+}
+
 .footer__navigation__list-item {
   margin-bottom: 15px;
+
+  @media (max-width: $media-mobile) {
+    margin-bottom: 16px;
+  }
+}
+
+.footer__navigation__list-item--column-1 {
+  grid-column: 1;
+}
+
+.footer__navigation__list-item--column-2 {
+  grid-column: 2;
+}
+
+.footer__navigation__list-item--row-1 {
+  grid-row: 1;
+}
+
+.footer__navigation__list-item--row-2 {
+  grid-row: 2;
+}
+
+.footer__navigation__list-item--row-3{
+  grid-row: 3;
 }
 
 .footer__navigation__list-link {
@@ -98,6 +158,11 @@
   @media (max-width: $media-tablet) {
     max-width: 122px;
   }
+
+  @media (max-width: $media-mobile) {
+    max-width: 100%;
+    padding: 11px 14px;
+  }
 }
 
 /*footer-list*/
@@ -105,6 +170,11 @@
   display: flex;
   margin: 25px 0 0 2px;
   gap: 10px;
+
+  @media (max-width: $media-mobile) {
+    gap: 13px;
+    margin: 19px 0 0 -1px;
+  }
 }
 
 .footer-list__link {
@@ -144,7 +214,7 @@
   flex-basis: 100%;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 20px;
+  gap: 20px;
 
   position: relative;
 
@@ -155,6 +225,11 @@
     margin-top: 25px;
     column-gap: 21px;
     row-gap: 15px;
+  }
+
+  @media (max-width: $media-mobile) {
+    margin-top: 30px;
+    padding-top: 25px;
   }
 }
 
@@ -180,6 +255,11 @@
 
   @media (max-width: $media-tablet) {
     max-width: 313px;
+  }
+
+  @media (max-width: $media-mobile) {
+    font-size: 16px;
+    line-height: 22px;
   }
 }
 
