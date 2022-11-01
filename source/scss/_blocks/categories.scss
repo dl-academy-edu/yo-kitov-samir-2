@@ -41,12 +41,12 @@
     text-decoration: underline;
     text-decoration-color: $basic-white;
   }
-}
 
-.categories__link {
   @media (max-width: $media-mobile) {
     margin-top: 5px;
-  }}
+  }
+}
+
 
 .categories__subtitle {
   font-family: $montserrat;

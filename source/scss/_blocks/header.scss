@@ -12,7 +12,7 @@
   margin: 0 auto 37px;
   padding-top: 50px;
 
-  @media (max-width: $media-tablet) {
+  @media (max-width: $media-menu) {
     position: relative;
     z-index: 2;
 
@@ -83,7 +83,7 @@
 }
 
 .header__logo {
-  @media (max-width: $media-tablet) {
+  @media (max-width: $media-menu) {
     width: 62px;
     height: 32px;
   }
@@ -128,7 +128,7 @@
     transition: transform 0.4s;
   }
 
-  @media (max-width: $media-tablet) {
+  @media (max-width: $media-menu) {
     display: block;
 
     width: 20px;
@@ -177,7 +177,7 @@
 
   transition: top 0.4s, left 0.4s;
 
-  @media (max-width: $media-tablet) {
+  @media (max-width: $media-menu) {
     height: 100vh;
     background-color: $document-disabled;
   }
@@ -190,7 +190,7 @@
   margin-left: 60px;
   padding-bottom: 5px;
 
-  @media (max-width: $media-tablet) {
+  @media (max-width: $media-menu) {
     opacity: 0;
 
     margin: 0;
@@ -213,7 +213,7 @@
   align-items: center;
   column-gap: 21px;
 
-  @media (max-width: $media-tablet) {
+  @media (max-width: $media-menu) {
     flex-direction: column;
     gap: 20px;
 
@@ -236,7 +236,7 @@
   font-weight: 700;
   font-size: 14px;
 
-  @media (max-width: $media-tablet) {
+  @media (max-width: $media-menu) {
     display: block;
   }
 }
@@ -288,7 +288,7 @@
   background-repeat: no-repeat;
   padding: 10px 0;
 
-  @media (max-width: $media-tablet) {
+  @media (max-width: $media-menu) {
     height: 19px;
     width: 20px;
 
@@ -311,7 +311,7 @@
   margin-left: 14px;
   font-size: 14px;
 
-  @media (max-width: $media-tablet) {
+  @media (max-width: $media-menu) {
     display: none;
   }
 }
