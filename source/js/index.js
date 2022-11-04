@@ -1,8 +1,8 @@
 const popup = document.querySelector('.popup') || document.querySelector('.feedback');
-const popupClose = popup.querySelector('.popup__close');
+const popupClose = document.querySelector('.popup__close');
 const popupOpen = document.querySelector('.slider-banner__info__btn');
-const checkboxAgreement = popup.querySelector('#agreement');
-const submitPopup = popup.querySelector('.feedback__form__submit');
+const checkboxAgreement = document.querySelector('#agreement');
+const submitPopup = document.querySelector('.feedback__form__submit');
 const buttonNav = document.querySelector('.header__button-nav');
 
 const POPUP_ACTIVE = 'popup--active';
@@ -34,14 +34,18 @@ if (popupClose) {
   });
 }
 
-popup.addEventListener('click', function (event) {
-  if (event.target === popup) {
-    closePopup();
-  }
-});
+if (popup) {
+  popup.addEventListener('click', function (event) {
+    if (event.target === popup) {
+      closePopup();
+    }
+  });
+}
 
 // активировать кнопку формы
-checkboxAgreement.addEventListener('click', switchDisabled);
+if (checkboxAgreement) {
+  checkboxAgreement.addEventListener('click', switchDisabled);
+}
 
 // переключить бургер меню
 buttonNav.addEventListener('click', switchMenu);
@@ -60,4 +64,3 @@ function switchMenu(e) {
 
   target.classList.toggle(MENU_ACTIVE);
 }
-

@@ -37,6 +37,11 @@ input[type="checkbox"]:disabled + .checkbox-custom:after {
 
     width: 19px;
     height: 19px;
+
+    @media (max-width: $media-mobile) {
+      width: 17px;
+      height: 17px;
+    }
   }
 
   &:before {
@@ -46,6 +51,11 @@ input[type="checkbox"]:disabled + .checkbox-custom:after {
     opacity: 0;
     z-index: 1;
     transition: 0.4s;
+
+    @media (max-width: $media-mobile) {
+      left: -1px;
+      top: 49%;
+    }
   }
 
   &:after {

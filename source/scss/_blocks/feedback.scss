@@ -3,6 +3,17 @@
   background-color: $light-grey;
   padding: 42px 40px;
   position: relative;
+
+  @media (max-width: $media-tablet) {
+    padding: 44px 56px 42px;
+  }
+
+  @media (max-width: $media-mobile) {
+    max-width: 89.33%;
+
+    padding: 25px;
+    margin-bottom: 12px;
+  }
 }
 
 /*feedback-form__data*/
@@ -16,6 +27,18 @@
   flex-wrap: wrap;
   max-width: 600px;
   margin-bottom: 20px;
+
+  @media (max-width: $media-tablet) {
+    max-width: 536px;
+
+    margin-bottom: 23px;
+  }
+
+  @media (max-width: $media-mobile) {
+    gap: 15px;
+
+    margin-bottom: 16px;
+  }
 }
 
 /*feedback-form__wrap-input*/
@@ -30,16 +53,38 @@
 .feedback__form__wrap-input--phone {
   flex-basis: calc(100% / 2 - 10px);
   margin-bottom: 2px;
+
+  @media (max-width: $media-mobile) {
+    flex-basis: 100%;
+  }
 }
 
 .feedback__form__label {
   margin-bottom: 6px;
+
+  @media (max-width: $media-mobile) {
+    margin-bottom: 5px;
+  }
 }
 
 .feedback__form__input {
   border: 1px solid $border-input;
   padding: 16px;
   transition: border 0.4s;
+
+  @media (max-width: $media-tablet) {
+    font-size: 16px;
+    line-height: 19px;
+
+    padding: 16px 16px 13px 19px;
+  }
+
+  @media (max-width: $media-mobile) {
+    font-size: 14px;
+    line-height: 16px;
+
+    padding: 11px 16px 11px 14px;
+  }
 
   &:hover {
     border: 1px solid $brow;
@@ -80,6 +125,14 @@
   font-size: 14px;
   font-family: $roboto;
   line-height: 16px;
+
+
+  @media (max-width: $media-mobile) {
+    & .checkbox-custom:before,
+    & .checkbox-custom:after {
+      top: 22%;
+    }
+  }
 }
 
 .feedback__form__personal-data__label {
@@ -87,4 +140,15 @@
 
   padding-left: 34px;
   margin-bottom: 20px;
+
+  @media (max-width: $media-mobile) {
+    margin-bottom: 15px;
+    padding-left: 29px;
+  }
+}
+
+.feedback__form__submit {
+  @media (max-width: $media-mobile) {
+    padding: 9px 22px;
+  }
 }
