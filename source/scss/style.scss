@@ -1892,7 +1892,6 @@
 /**grid**/
 .deals__list {
   font-family: $lato;
-  font-weight: 500;
   font-size: 14px;
   line-height: 17px;
   color: $text-grid;
@@ -1908,7 +1907,7 @@
 
 .deals__item--phones {
   display: grid;
-  grid-template-columns: repeat(2,40% 52%);
+  grid-template-columns: repeat(2, 40% 52%);
   grid-column-gap: 50px;
   grid-column: 1/3;
 
@@ -1929,7 +1928,6 @@
 }
 
 .deals__options-phones {
-  font-weight: 500;
   font-size: 22px;
   line-height: 26px;
   color: $dark-grey;
@@ -1988,6 +1986,9 @@
 /*accessories*/
 .deals__item--accessories {
   background-color: $grid-orange-bg;
+  padding: 84px 18px;
+
+  text-align: center;
 }
 
 .deals__img-accessories {
@@ -1995,25 +1996,275 @@
 }
 
 .deals__text-accessories {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  color: $basic-white;
 
+  padding: 12px 31px 18px 35px;
 }
 
 .deals__link-accessories {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  color: $grid-learn-color;
+  text-transform: uppercase;
 
+  margin-left: 5px;
 }
 
 
 /*science*/
+.deals__item--science {
+  grid-column: 2/4;
 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  padding-top: 108px;
+}
+
+.deals__wrap-title-science {
+  margin-left: 95px;
+}
+
+.deals__title-science {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+
+  margin-bottom: 13px;
+}
+
+.deals__tagline-science {
+  font-size: 22px;
+  line-height: 26px;
+  color: $dark-grey;
+
+  padding-right: 83px;
+}
+
+.deals__img-science {
+  margin-top: 54px;
+}
+
+.deals__wrap-text-science {
+  grid-column: 2;
+  grid-row: 1/3;
+
+  padding: 0 96px 10px 25px;
+}
+
+.deals__text-science {
+  margin-bottom: 17px;
+}
+
+.deals__link-science {
+  font-size: 12px;
+  line-height: 14px;
+}
 
 /*programs*/
+.deals__item--programs {
+  grid-column: 4/-1;
+  grid-row: 2/4;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 162px 25px 162px;
+
+  background-color: $grid-violet-bg;
+}
+
+.deals__wrap-diskette-programs {
+  background-color: $grid-violet-circle;
+
+  border-radius: 50%;
+
+  padding: 32px 54px 31px;
+  margin-bottom: 22px;
+}
+
+.deals__popular-programs {
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 12px;
+  color: $basic-white;
+  text-transform: uppercase;
+
+  margin-bottom: 15px;
+  padding: 5px 15px;
+
+  border-radius: 20px;
+
+  background-color: $grid-popular-bg;
+
+  display: inline-flex;
+}
+
+.deals__img-programs {
+  margin: 0 12px -5px 0;
+}
+
+.deals__meet-programs {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  color: $basic-white;
+  text-transform: uppercase;
+
+  display: inline-flex;
+}
+
+.deals__title-programs {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  color: $basic-white;
+}
+
+.deals__text-programs {
+  color: $basic-white;
+
+  padding: 10px 32px 30px;
+}
+
+.deals__link-programs {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: $dark-grey;
+
+  background-color: $grid-link-bg;
+
+  padding: 19px 41px;
+
+  border-radius: 50px;
+}
 
 /*best-choice*/
+.deals__item--best-choice {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 
+  padding-top: 15px;
+
+  color: $basic-white;
+
+  background-color: $grid-best-bg;
+
+  grid-column: 1/3;
+}
+
+.deals__text-best-choice {
+  font-weight: 700;
+  font-size: 8px;
+  line-height: 10px;
+  text-transform: uppercase;
+
+  padding: 3px 5px;
+  margin: 0 0 40px 15px;
+
+  border-radius: 3px;
+
+  background-color: $grid-choice-bg;
+}
+
+.deals__title-best-choice {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+
+  margin-bottom: 31px;
+  padding: 0 231px 0 233px;
+
+  align-self: center;
+}
+
+.deals__img-best-choice {
+
+}
 
 /*social*/
+.deals__item--games {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  padding: 95px 24px;
+}
+
+.deals__img-games {
+  margin-bottom: 12px;
+}
+
+.deals__tagline-games {
+  font-size: 22px;
+  line-height: 26px;
+  color: $dark-grey;
+  text-align: center;
+
+  margin-bottom: 20px;
+}
+
+.deals__link-games {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+/*social*/
+.deals__item--social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 57px 20px;
+}
+
+.deals__img-social {
+  margin-bottom: 17px;
+}
+
+.deals__link-social {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  color: $dark-grey;
+}
 
 /*display*/
+.deals__item--display {
+  grid-column: 2/-1;
 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: center;
+
+  background-color: $grid-display-bg;
+
+  padding: 0 200px;
+}
+
+.deals__img-display {
+  margin-right: 79px;
+}
+
+.deals__tagline-display {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: $basic-white;
+
+  max-width: 200px;
+}
