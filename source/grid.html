@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en" class="no-js page">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width">
+  <meta name="google" content="notranslate">
+  <meta name="format-detection" content="telephone=no">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@200;300;600;700&family=Lato:wght@700&family=Open+Sans:wght@400;700&family=Roboto&display=swap"
+    rel="stylesheet">
+
+  <title>Grid</title>
+
+  <script>
+    var docElement = document.documentElement;
+    docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
+  </script>
+
+  <!-- Favicon -->
+
+  <!-- build:css -->
+  <link href="css/style.min.css" rel="stylesheet">
+  <!-- endbuild -->
+</head>
+<body>
+@@include("./blocks/header.html", {
+hrefLogo: "./index.html",
+hrefCatalog: "./catalog.html",
+hrefAbout: "./about.html",
+hrefBlog: "./blog.html",
+hrefAnimation: "./animation.html",
+hrefSvg: "./svg.html",
+hrefGrid: "#",
+hrefContact: "./contact.html"
+})
+
+<main>
+  <section class="page-title container">
+    <h1 class="page-title__title main-title">Grid</h1>
+
+    <ul class="page-title__crumbs">
+      <li class="page-title__crumbs__item">
+        <a href="./index.html" class="page-title__crumbs__link">Home</a>
+      </li>
+
+      <li class="page-title__crumbs__item">
+        <a href="./catalog.html" class="page-title__crumbs__link">Grid</a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="deals">
+    <h2 class="visually-hidden">Предложения</h2>
+    <ul class="deals__list">
+      <li class="deals__item deals__item--phones">
+        <div class="deals__wrap-info-phones">
+          <p class="deals__title-phones">Iphone 6s</p>
+          <p class="deals__options-phones">3D Touch. 12MP photos. 4K video. One powerful phone</p>
+          <p class="deals__text-phones">Learn more or visit an Apple Store today</p>
+        </div>
+        <picture>
+          <source media="(max-width: 767px)" srcset="./img/iphone_mobile.png, ./img/iphone_mobile@x2.png 2x">
+          <img class="deals__img-phones" width="249" height="345" src="./img/iphone.png" srcset="./img/iphone@x2.png 2x" alt="Изображение черного сотового телефона">
+        </picture>
+      </li>
+
+      <li class="deals__item deals__item--learn">
+        <p class="deals__title-learn">Learn more</p>
+        <p class="deals__text-learn">How to Use Rotary Evaporator in Chemical Labs</p>
+        <a class="deals__link-learn grid-link" href="#">Download now</a>
+      </li>
+
+      <li class="deals__item deals__item--accessories">
+        <img class="deals__img-accessories" width="314" height="164" src="./img/keyboard.png" srcset="./img/keyboard@x2.png 2x" alt="Светлая клавиатура с проводом">
+        <p class="deals__text-accessories">Our Brand New Keyboard</p>
+        <a class="deals__link-accessories" href="#">Learn</a>
+      </li>
+
+      <li class="deals__item deals__item--science">
+        <div class="deals__wrap-title-science">
+          <p class="deals__title-science">Imac.Retina</p>
+          <p class="deals__tagline-science">Hardly a month passes these days where</p>
+        </div>
+
+        <picture>
+          <source media="(max-width: 767px)" srcset="./img/iphone_display_mobile.jpg, ./img/iphone_display_mobile@x2.jpg 2x">
+          <source media="(max-width: 768px)" srcset="./img/iphone_display_tablet.jpg, ./img/iphone_display_tablet@x2.jpg 2x">
+          <img class="deals__img-science" width="352" height="164" src="./img/iphone_display.jpg" srcset="./img/iphone_display@x2.jpg 2x" alt="Изображение черного сотового телефона">
+        </picture>
+
+        <div class="">
+          <p class="deals__text-science">Apple may be experimenting in the virtual reality space. The company has been granted a patent for a head-mounted virtual reality device that would use the iPhone screen as the display.</p>
+          <a class="deals__link-science" href="#">Download now</a>
+        </div>
+      </li>
+
+      <li class="deals__item deals__item--programs">
+        <div class="deals__wrap-diskette-programs">
+          <span class="deals__popular-programs">Popular</span>
+          <img class="deals__img-programs" src="./img/diskette.jpg" srcset="./img/diskette@x2.jpg 2x" alt="Компьютерная дискета">
+          <span class="deals__meet-programs">Meet</span>
+        </div>
+
+        <p class="deals__title-programs">iCloud</p>
+        <p class="deals__text-programs">With iCloud, you always have the latest versions of your most important things — like documents, apps, notes, and contacts — on whatever device you’re using.</p>
+
+        <a class="deals__link-programs" href="#">Learn more</a>
+      </li>
+
+      <li class="deals__item deals__item--best-choice">
+        <p class="deals__text-best-choice">Best choice</p>
+        <p class="deals__title-best-choice">Much MuchBetter Experience</p>
+
+        <img class="deals__img-best-choice" width="700" height="275" src="./img/notebook.png" srcset="./img/notebook@x2.png 2x" alt="Ноутбук">
+      </li>
+
+      <li class="deals__item deals__item--games">
+        <img class="deals__img-games" width="303" height="167" src="./img/joystick.png" srcset="./img/joystick@x2.png 2x" alt="Игровой джостик белого цвета">
+        <p class="deals__tagline-games">Games ourpasion</p>
+        <a class="deals__link-games" href="#">Learn</a>
+      </li>
+
+      <li class="deals__item deals__item--social">
+        <img class="deals__img-social" width="59" height="59" src="./img/svg/img_instagram.svg" alt="Иконка инстаграма">
+        <a class="deals__link-social" href="#">Follow me</a>
+      </li>
+
+      <li class="deals__item deals__item--display">
+        <picture>
+          <source media="(max-width: 767px)" srcset="./img/television_mobile.png, ./img/television_mobile@x2.png 2x">
+          <img class="deals__img-display" width="271" height="215" src="./img/television.png" srcset="./img/television@x2.png 2x" alt="Черно-зелёный телевизор с двумя антенами">
+        </picture>
+
+        <p class="deals__tagline-display">More than just a display,  it’s a vision</p>
+      </li>
+    </ul>
+  </section>
+</main>
+
+@@include('blocks/footer.html')
+
+<script src="js/app.js" type="module" defer></script>
+</body>
+</html>
