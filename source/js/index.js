@@ -75,7 +75,7 @@ function switchMenu(e) {
     return;
   }
 
-  nav.classList.add(HIDDEN_MENU);
+  nav.classList.remove(HIDDEN_MENU);
   const addAccessibility = setTimeout(() => {
     target.classList.toggle(MENU_ACTIVE);
     clearTimeout(addAccessibility)
