@@ -4,9 +4,11 @@ const popupOpen = document.querySelector('.slider-banner__info__btn');
 const checkboxAgreement = document.querySelector('#agreement');
 const submitPopup = document.querySelector('.feedback__form__submit');
 const buttonNav = document.querySelector('.header__button-nav');
+const nav = document.querySelector('.header-nav');
 
 const POPUP_ACTIVE = 'popup--active';
 const MENU_ACTIVE = 'header__button-nav--active';
+const HIDDEN_MENU = 'header-nav--hidden';
 
 // закрытие и открытие попапа
 if (popupOpen) {
@@ -62,5 +64,20 @@ function switchDisabled() {
 function switchMenu(e) {
   const target = e.target;
 
-  target.classList.toggle(MENU_ACTIVE);
+  if (!nav.classList.contains(HIDDEN_MENU)) {
+    target.classList.toggle(MENU_ACTIVE);
+
+    const removeAccessibility = setTimeout(() => {
+      nav.classList.add(HIDDEN_MENU);
+      clearTimeout(removeAccessibility)
+    }, 400)
+
+    return;
+  }
+
+  nav.classList.add(HIDDEN_MENU);
+  const addAccessibility = setTimeout(() => {
+    target.classList.toggle(MENU_ACTIVE);
+    clearTimeout(addAccessibility)
+  }, 0)
 }
