@@ -40,36 +40,52 @@ hrefContact: "./contact.html"
 <main>
   <section class="container">
     <div class="slider-banner">
-      <div class="slider-banner__info">
-        <h1 class="slider-banner__info__title">The ooh noo collection</h1>
-        <p class="slider-banner__info__subtitle">Designed in Slovenia</p>
-        <button class="slider-banner__info__btn link">Explore now</button>
-      </div>
+      <ul class="slider-banner__list">
+        <li class="slider-banner__item slider-banner__item--active">
+          <div class="slider-banner__info">
+            <h1 class="slider-banner__info__title">The ooh noo collection</h1>
+            <p class="slider-banner__info__subtitle">Designed in Slovenia</p>
+            <button class="slider-banner__info__btn link">Explore now</button>
+          </div>
+
+          <img class="slider-banner__img" width="636" height="489" src="./img/monster.png" srcset="./img/monster@x2.png 2x" alt="Чёрный, весёлый мультяшный монстр в строительной тачке">
+          <p class="slider-banner__delivery-text">Free (continental) USA shipping on all orders of $100 USD or more!</p>
+        </li>
+
+        <li class="slider-banner__item">
+          <div class="slider-banner__info">
+            <h1 class="slider-banner__info__title">Lorem ipsum dolor sit.</h1>
+            <p class="slider-banner__info__subtitle">Lorem ipsum dolor sit amet.</p>
+            <button class="slider-banner__info__btn link">Explore now</button>
+          </div>
+
+          <img class="slider-banner__img" width="352" height="164" src="./img/iphone_display.jpg" srcset="./img/iphone_display@x2.jpg 2x" alt="Чёрный, весёлый мультяшный монстр в строительной тачке">
+          <p class="slider-banner__delivery-text">Free (continental) USA shipping on all orders of $100 USD or more!</p>
+        </li>
+      </ul>
 
       <div class="slider-banner__navigation">
         <span class="slider-banner__navigation__counter">01</span>
 
         <ul class="slider-banner__navigation__list">
-          <li class="slider-banner__navigation__item slider-banner__navigation__item--active">
+          <li class="slider-banner__navigation__item slider-banner__navigation__item--active" data-button-number="1">
             <button class="slider-banner__navigation__button"
-                    aria-label="Переключить слайдер на 1"></button>
+                    aria-label="Переключить на 1 слайдер"></button>
           </li>
 
-          <li class="slider-banner__navigation__item">
-            <button class="slider-banner__navigation__button" aria-label="Переключить слайдер на 2"></button>
+          <li class="slider-banner__navigation__item" data-button-number="2">
+            <button class="slider-banner__navigation__button" aria-label="Переключить на 2 слайдер"></button>
           </li>
 
-          <li class="slider-banner__navigation__item">
-            <button class="slider-banner__navigation__button" aria-label="Переключить слайдер на 3"></button>
+          <li class="slider-banner__navigation__item" data-button-number="3">
+            <button class="slider-banner__navigation__button" aria-label="Переключить на 3 слайдер"></button>
           </li>
 
-          <li class="slider-banner__navigation__item">
-            <button class="slider-banner__navigation__button" aria-label="Переключить слайдер на 4"></button>
+          <li class="slider-banner__navigation__item" data-button-number="4">
+            <button class="slider-banner__navigation__button" aria-label="Переключить на 4 слайдер"></button>
           </li>
         </ul>
       </div>
-
-      <p class="slider-banner__delivery-text">Free (continental) USA shipping on all orders of $100 USD or more!</p>
     </div>
   </section>
 
