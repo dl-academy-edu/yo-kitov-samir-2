@@ -85,6 +85,8 @@
 
   opacity: 0;
 
+  transition: 0.7s;
+
   @media (max-width: $media-tablet) {
     padding-top: 16px;
     background: $bg-slider;

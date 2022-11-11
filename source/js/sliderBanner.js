@@ -9,7 +9,7 @@ if (document.querySelector('.slider-banner__navigation__list')) {
   const ITEM_ACTIVE = "slider-banner__item--active"
   const CONTROL_ACTIVE = "slider-banner__navigation__item--active"
 
-  let previousSlider = Number(listControls.querySelector(`.${CONTROL_ACTIVE}`).dataset.buttonNumber);
+  let previousNumber = Number(listControls.querySelector(`.${CONTROL_ACTIVE}`).dataset.buttonNumber);
 
   listControls.replaceChildren();
   listControls.append(...createControls(listSlider.children.length));
@@ -19,13 +19,14 @@ if (document.querySelector('.slider-banner__navigation__list')) {
   function onControlClick(e) {
     const target = e.target
 
-    if (target.closest('.slider-banner__navigation__button')) {
+    if (target.closest('.slider-banner__navigation__item')) {
       const data = getDataAttribute(target);
 
       setCounter(data);
-      flipSlider(data, previousSlider)
+      flipSlider(data, previousNumber)
+      makeItemActive(data, previousNumber)
 
-      previousSlider = data;
+      previousNumber = data;
     }
   }
 
@@ -60,5 +61,10 @@ if (document.querySelector('.slider-banner__navigation__list')) {
   function flipSlider(number, prevSlider) {
     listSlider.children[prevSlider - 1].classList.remove(ITEM_ACTIVE);
     listSlider.children[number - 1].classList.add(ITEM_ACTIVE);
+  }
+
+  function makeItemActive(number, prevItem) {
+    listControls.children[prevItem - 1].classList.remove(CONTROL_ACTIVE)
+    listControls.children[number - 1].classList.add(CONTROL_ACTIVE)
   }
 }
