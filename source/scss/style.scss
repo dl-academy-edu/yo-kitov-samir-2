@@ -101,6 +101,10 @@
   opacity: 1;
 }
 
+.slider-banner__item--hidden.slider-banner__item {
+  display: none;
+}
+
 /*slider-banner info*/
 .slider-banner__info {
   padding: 0 28px 89px 133px;

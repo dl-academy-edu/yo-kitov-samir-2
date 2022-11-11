@@ -5,11 +5,16 @@ if (document.querySelector('.slider-banner__navigation__list')) {
   const itemSlider = listSlider.querySelector('.slider-banner__item')
   const counterSlider = document.querySelector('.slider-banner__navigation__counter')
 
-  const FIRST_BUTTON = 1;
-  const ITEM_ACTIVE = "slider-banner__item--active"
-  const CONTROL_ACTIVE = "slider-banner__navigation__item--active"
+  const DEFAULT_CONTROL = 1;
+  const ITEM_ACTIVE = 'slider-banner__item--active'
+  const ITEM_HIDDEN = 'slider-banner__item--hidden'
+  const CONTROL_ACTIVE = 'slider-banner__navigation__item--active'
 
   let previousNumber = Number(listControls.querySelector(`.${CONTROL_ACTIVE}`).dataset.buttonNumber);
+
+  [].forEach.call(listSlider.children, function(item, i) {
+    console.log(item);
+  });
 
   listControls.replaceChildren();
   listControls.append(...createControls(listSlider.children.length));
@@ -33,20 +38,21 @@ if (document.querySelector('.slider-banner__navigation__list')) {
   function createControls(number) {
     const result = [];
 
-    for (let i = FIRST_BUTTON; i <= number; i++) {
+    for (let i = 1; i <= number; i++) {
       const control = itemControl.cloneNode(true);
-      const buttonControl = control.querySelector('.slider-banner__navigation__button')
+      const buttonControl = control.querySelector('.slider-banner__navigation__button');
 
-      buttonControl.setAttribute('aria-label', `Переключить на ${i} слайдер`)
+      buttonControl.setAttribute('aria-label', `Переключить на ${i} слайдер`);
       control.dataset.buttonNumber = i.toString();
 
-      if (i > FIRST_BUTTON) {
-        control.classList.remove(CONTROL_ACTIVE)
+      if (control.classList.contains(CONTROL_ACTIVE)) {
+        control.classList.remove(CONTROL_ACTIVE);
       }
 
       result.push(control);
     }
 
+    result[DEFAULT_CONTROL - 1].classList.add(CONTROL_ACTIVE);
     return result;
   }
 
