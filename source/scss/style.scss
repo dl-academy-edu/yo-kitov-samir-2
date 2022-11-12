@@ -99,10 +99,12 @@
 
 .slider-banner__item--active.slider-banner__item {
   opacity: 1;
+  transition: 0.7s;
 }
 
 .slider-banner__item--hidden.slider-banner__item {
   display: none;
+  transition: 0.7s;
 }
 
 /*slider-banner info*/
