@@ -1378,6 +1378,7 @@
 
 .animation__city {
   width: 100%;
+  height: 100%;
 }
 
 .animation__sun {
@@ -1391,6 +1392,7 @@
 .animation__clouds {
   position: absolute;
   width: 100%;
+  height: 22%;
 }
 
 .animation__clouds--1 {
@@ -1433,6 +1435,7 @@
   top: 30%;
 
   width: 8%;
+  height: 44%;
 
   z-index: 4;
 }
@@ -1451,6 +1454,7 @@
   top: 33%;
 
   width: 11.2%;
+  height: 61.36%;
 
   z-index: 5;
 }
@@ -1587,6 +1591,7 @@
 /*car*/
 .animation__car {
   width: 100%;
+  height: 100%;
 }
 
 /*wheel*/
@@ -1608,6 +1613,7 @@
 .animation__wheel--car-1-left,
 .animation__wheel--car-1-right {
   width: 17.9%;
+  height: 53%;
   top: 73%;
 }
 
@@ -1622,6 +1628,7 @@
 .animation__wheel--car-2-left,
 .animation__wheel--car-2-right {
   width: 16.1%;
+  height: 38.4%;
   top: 74%;
 }
 
@@ -1637,6 +1644,7 @@
 .animation__wheel--car-3-left,
 .animation__wheel--car-3-right {
   width: 13%;
+  height: 59.5%;
   top: 65%;
 }
 
@@ -1652,6 +1660,7 @@
 .animation__wheel--car-4-left,
 .animation__wheel--car-4-right {
   width: 19%;
+  height: 49.14%;
   top: 76%;
 }
 
@@ -1696,11 +1705,13 @@
 
 .animation__taxi {
   width: 100%;
+  height: 100%;
 }
 
 .animation__wheel-taxi {
   position: absolute;
   width: 12.5%;
+  height: 50%;
 
   animation: wheel-taxi 15s linear infinite 4s;
 }
@@ -1742,6 +1753,7 @@
   left: 35%;
 
   width: 19.11%;
+  height: 48.8%;
 
   opacity: 0;
 
@@ -1779,6 +1791,8 @@
 
 .animation__woman {
   width: 100%;
+  height: 100%;
+
   position: relative;
 }
 
@@ -1786,7 +1800,9 @@
   position: absolute;
   top: 47%;
   left: 5%;
+
   width: 51%;
+  height: 22.58%;
 
   z-index: 6;
 }
@@ -1797,6 +1813,8 @@
   left: 19%;
 
   width: 33.31%;
+  height: 16.65%;
+
   z-index: 5;
 
   transform-origin: 15% 25%;
@@ -1829,6 +1847,7 @@
   left: -45%;
 
   width: 88%;
+  height: 39.98%;
 
   opacity: 0;
 
@@ -1866,6 +1885,8 @@
 
 .animation__man {
   width: 100%;
+  height: 100%;
+
   position: relative;
 
   z-index: 4;
@@ -1877,6 +1898,7 @@
   left: 0;
 
   width: 43.43%;
+  height: 36.44%;
 
   z-index: 3;
 
@@ -1911,6 +1933,7 @@
   left: -7%;
 
   width: 81.98%;
+  height: 24.3%;
 
   opacity: 0;
 
@@ -2009,10 +2032,6 @@
 
     grid-template-columns: 1fr;
   }
-}
-
-.deals__wrap-info-phones {
-
 }
 
 .deals__title-phones {
@@ -2579,65 +2598,174 @@
 }
 
 //**svg**/
+/*sun*/
 .svg-sun {
-  //transform: translate(-47px, 10px);
-  //animation: svg-sun 4s linear infinite;
-  animation: svg-sun 10s linear infinite 0s;
-  transform-origin: 80% 95%;
+  animation: svg-sun 10s linear infinite;
+  transform-origin: 76% 95%;
 }
 
 @keyframes svg-sun {
-  //0% {
-  //  transform: translate(-47px, 10px);
-  //  opacity: 0;
-  //}
-  //
-  //1% {
-  //  transform: translate(-27px, 10px);
-  //  opacity: 1;
-  //}
-  //
-  //30% {
-  //  transform: translate(27px,-12px);
-  //}
-  //
-  //60% {
-  //  transform: translate(78px,-12px);
-  //}
-  //
-  //99% {
-  //  transform: translate(148px,25px);
-  //  opacity: 1;
-  //}
-  //
-  //99.5% {
-  //  transform: translate(148px,25px);
-  //  opacity: 0;
-  //}
-  //
-  //100% {
-  //  transform: translate(-47px, 10px);
-  //
-  //}
-
   0% {
-    transform: rotate(100deg); //справа внизу
-    opacity: 0;
-  }
-  10% {
-    opacity: 0;
-  }
-  30% {
+    transform: rotate(-22deg);
     opacity: 1;
   }
-  70% {
+
+  40% {
+    transform: rotate(59deg);
     opacity: 1;
+    fill: $svg-sun;
   }
-  80% {
+
+  40.5% {
+    transform: rotate(59deg);
     opacity: 0;
   }
+
+  40.9% {
+    transform: rotate(-22deg);
+    opacity: 0;
+    fill: $basic-white;
+  }
+
+  50% {
+    transform: rotate(-22deg);
+    opacity: 1;
+  }
+
+  84% {
+    transform: rotate(59deg);
+    opacity: 1;
+    fill: $basic-white;
+  }
+
+  85% {
+    transform: rotate(59deg);
+    opacity: 0;
+    fill: $svg-sun;
+  }
+
   100% {
-    transform: rotate(-40deg);
+    transform: rotate(59deg);
     opacity: 0;
+    fill: $svg-sun;
+  }
+}
+
+/*day*/
+.svg-day {
+  animation: svg-day 10s linear infinite;
+}
+
+@keyframes svg-day {
+  0% {
+    fill: $svg-day;
+  }
+
+  40% {
+    fill: $svg-day;
+  }
+
+  50% {
+    fill: $basic-black;
+  }
+
+  85% {
+    fill: $basic-black;
+  }
+
+  100% {
+    fill: $svg-day;
+  }
+}
+
+
+/*path-1*/
+.svg-path-1 {
+  animation: svg-path-1 4s linear 3s;
+}
+
+@keyframes svg-path-1 {
+  0% {
+    transform: translate(-250px 0);
+  }
+
+  33% {
+    transform: translate(-250px 0);
+  }
+
+  50% {
+    transform: translate(0 0);
+  }
+
+  52% {
+    transform: translate(-20px 0);
+  }
+
+  54% {
+    transform: translate(0 0);
+  }
+
+  56% {
+    transform: translate(-10px 0);
+  }
+
+  61% {
+    transform: translate(0 0);
+  }
+
+  100% {
+    transform: translate(0 0);
+  }
+}
+
+
+/*path-2*/
+.svg-path-2 {
+  animation: svg-path-2 3s linear 3s;
+}
+
+@keyframes svg-path-2 {
+  0% {
+    transform: translate(-250px 0);
+  }
+
+  20% {
+    transform: translate(0 0);
+  }
+
+  22% {
+    transform: translate(-20px 0);
+  }
+
+  24% {
+    transform: translate(0 0);
+  }
+
+  26% {
+    transform: translate(-10px 0);
+  }
+
+  28% {
+    transform: translate(0 0);
+  }
+
+  100% {
+    transform: translate(0 0);
+  }
+}
+
+/*block*/
+.svg-block {
+  animation: svg-block 3s linear;
+  fill: transparent;
+}
+
+@keyframes svg-block {
+  0% {
+    fill: $svg-block;
+  }
+
+  100% {
+    fill: $svg-block;
   }
 }
