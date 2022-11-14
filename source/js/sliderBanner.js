@@ -5,19 +5,24 @@ if (document.querySelector('.slider-banner__navigation__list')) {
   const itemSlider = listSlider.querySelector('.slider-banner__item');
   const counterSlider = document.querySelector('.slider-banner__navigation__counter');
 
+  // Номер слайда который быдет активным при загрузки страницы
   const DEFAULT_CONTROL = 1;
   const ITEM_ACTIVE = 'slider-banner__item--active';
   const ITEM_HIDDEN = 'slider-banner__item--hidden';
   const CONTROL_ACTIVE = 'slider-banner__navigation__item--active';
 
+  // Храним номер предыдущего слайда
   let previousNumber = Number(listControls.querySelector(`.${CONTROL_ACTIVE}`).dataset.buttonNumber);
 
+  // На всякий случай при загрузке страницы проходим по всем слайдам кроме активного и убираем доступность
   [].forEach.call(listSlider.children, function (item) {
     if (!item.classList.contains(ITEM_HIDDEN) && !item.classList.contains(ITEM_ACTIVE)) {
       item.classList.add(ITEM_HIDDEN);
     }
   });
 
+  // При загрузке страницы удалить все кнопки переключения слайдов
+  // и добавить заного столько-же кнопок сколько и слайдов
   listControls.replaceChildren();
   listControls.append(...createControls(listSlider.children.length));
 
@@ -32,7 +37,8 @@ if (document.querySelector('.slider-banner__navigation__list')) {
     }
 
     setCounter(data);
-    flipSlider(data, previousNumber);
+    hideSlide(previousNumber);
+    showSlide(data);
     makeItemActive(data, previousNumber);
 
     previousNumber = data;
@@ -48,6 +54,7 @@ if (document.querySelector('.slider-banner__navigation__list')) {
       buttonControl.setAttribute('aria-label', `Переключить на ${i} слайдер`);
       control.dataset.buttonNumber = i.toString();
 
+      // Делаем все кнопки слайдера не активными
       if (control.classList.contains(CONTROL_ACTIVE)) {
         control.classList.remove(CONTROL_ACTIVE);
       }
@@ -55,6 +62,7 @@ if (document.querySelector('.slider-banner__navigation__list')) {
       result.push(control);
     }
 
+    // делаем одну кнопку активной
     result[DEFAULT_CONTROL - 1].classList.add(CONTROL_ACTIVE);
     return result;
   }
@@ -72,35 +80,27 @@ if (document.querySelector('.slider-banner__navigation__list')) {
     listControls.children[number - 1].classList.add(CONTROL_ACTIVE);
   }
 
-  function flipSlider(number, prevItem) {
-    const currentSlide = listSlider.children[number - 1];
+  function hideSlide(prevItem) {
     const previousSlide = listSlider.children[prevItem - 1];
 
-    // currentSlide.addEventListener('transitionstart', () => {
-    //   currentSlide.classList.remove(ITEM_HIDDEN);
-    //   console.log('анимация началась');
-    // });
-    //
-    // previousSlide.addEventListener('transitionend', () => {
-    //   previousSlide.classList.add(ITEM_HIDDEN);
-    //   console.log('анимация закончилась');
-    // });
-
+    // Прячем текущий слайдер
     previousSlide.classList.remove(ITEM_ACTIVE);
+    // Если слайд спрятан, то убераем его доступность
     setTimeout(() => {
       if (!previousSlide.classList.contains(ITEM_ACTIVE)) {
         previousSlide.classList.add(ITEM_HIDDEN);
       }
     }, 700);
+  }
 
+  function showSlide(number) {
+    const currentSlide = listSlider.children[number - 1];
+
+    // Делаем следующий слайд доступным
     currentSlide.classList.remove(ITEM_HIDDEN);
+    // Показываем следующий слайд
     setTimeout(() => {
       currentSlide.classList.add(ITEM_ACTIVE);
     }, 0);
   }
-
-  // function accessibilityItem(addAccessibility, removeAccessibility) {
-  //   removeAccessibility;
-  //   addAccessibility;
-  // }
 }
