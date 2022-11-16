@@ -28,6 +28,11 @@ if (document.querySelector('.slider-banner__navigation__list')) {
 
   listControls.addEventListener('click', onControlClick);
 
+  if (localStorage.slide) {
+    activateSlider(localStorage.slide, previousNumber);
+  }
+
+  // функции
   function onControlClick(e) {
     const target = e.target;
     const data = getDataAttribute(target);
@@ -36,12 +41,7 @@ if (document.querySelector('.slider-banner__navigation__list')) {
       return;
     }
 
-    setCounter(data);
-    hideSlide(previousNumber);
-    showSlide(data);
-    makeItemActive(data, previousNumber);
-
-    previousNumber = data;
+    activateSlider(data, previousNumber);
   }
 
   function createControls(number) {
@@ -102,5 +102,19 @@ if (document.querySelector('.slider-banner__navigation__list')) {
     setTimeout(() => {
       currentSlide.classList.add(ITEM_ACTIVE);
     }, 0);
+  }
+
+  function saveSlideToStorage(number) {
+    localStorage.slide = number;
+  }
+
+  function activateSlider(number, prevItem) {
+    setCounter(number);
+    hideSlide(previousNumber);
+    showSlide(number);
+    makeItemActive(number, previousNumber);
+
+    previousNumber = number;
+    saveSlideToStorage(previousNumber);
   }
 }
