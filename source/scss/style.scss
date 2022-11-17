@@ -300,7 +300,7 @@
 
 /*.products*/
 .products {
-  padding: 92px 0 89px 60px;
+  padding: 92px 60px 89px 60px;
 
   @media (max-width: $media-tablet) {
     padding: 61px 0 61px 60px;
@@ -328,11 +328,16 @@
   position: relative;
   width: 100%;
   min-height: 345px;
+
   display: flex;
   align-items: flex-end;
 
+  overflow: hidden;
   @media (max-width: $media-tablet) {
     min-height: 314px;
+    width: 100%;
+
+    overflow: auto;
   }
 
   @media (max-width: $media-mobile) {
@@ -349,8 +354,6 @@
 
   display: flex;
   flex-wrap: nowrap;
-
-  overflow: hidden;
 }
 
 .products-slider__navigation__arrow {
