@@ -8,6 +8,8 @@
   font-size: 16px;
   line-height: 22px;
 
+  transition: background-color 0.4s;
+
   &:hover {
     background-color: $brow;
   }
@@ -23,5 +25,12 @@
   &:disabled {
     color: $text-disabled;
     background-color: $button-form-disabled;
+  }
+
+  @media (max-width: $media-mobile) {
+    padding: 8px 20px;
+
+    font-size: 14px;
+    line-height: 19px;
   }
 }

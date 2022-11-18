@@ -12,6 +12,8 @@ function handleInputChange() {
   target.style.backgroundSize = (val - min) * 100 / (max - min) + '% 100%';
 }
 
-handleInputChange();
+if (rangeInput) {
+  handleInputChange();
+  rangeInput.addEventListener('input', handleInputChange);
+}
 
-rangeInput.addEventListener('input', handleInputChange);

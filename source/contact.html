@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" class="no-js page">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width">
+  <meta name="google" content="notranslate">
+  <meta name="format-detection" content="telephone=no">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@200;300;600;700&family=Lato:wght@700&family=Open+Sans:wght@400;700&family=Roboto&display=swap"
+    rel="stylesheet">
+
+  <title>DL Academy страница contact учебного проекта</title>
+  <meta name="description" content="Верстка выполнена студентом с использованием технологий: Flex, scss, grid, gulp, html, семантическая верстка, адаптивная и резиновая верстка, svg, animation">
+  <meta name="keywords" content="Flex, scss, grid, gulp, html, семантическая верстка, адаптивная и резиновая верстка, svg, animation">
+
+  <script>
+    var docElement = document.documentElement;
+    docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
+  </script>
+
+  <!-- Favicon -->
+
+  <!-- build:css -->
+  <link href="css/style.min.css" rel="stylesheet">
+  <!-- endbuild -->
+</head>
+
+<body>
+@@include("blocks/header.html", {
+hrefLogo: "./index.html",
+hrefCatalog: "./catalog.html",
+hrefAbout: "./about.html",
+hrefBlog: "./blog.html",
+hrefAnimation: "./animation.html",
+hrefSvg: "./svg.html",
+hrefGrid: "./grid.html",
+hrefContact: "#"
+})
+
+<main>
+  <section class="page-title container">
+    <h1 class="page-title__title main-title">Contact &nbsp;us</h1>
+
+    <ul class="page-title__crumbs">
+      <li class="page-title__crumbs__item">
+        <a href="../index.html" class="page-title__crumbs__link">Home</a>
+      </li>
+
+      <li class="page-title__crumbs__item page-title__crumbs__item--active">
+        <a class="page-title__crumbs__link">Contact Us</a>
+      </li>
+    </ul>
+  </section>
+
+  <div class="wrap-feedback container">
+    @@include("blocks/feedback.html", {
+    classButton: "hidden"
+    })
+
+    <section class="feedback-description">
+      <h2 class="feedback-description__title">An expert is waiting to help you!</h2>
+      <p class="feedback-description__text">Our support team are on-hand to assist with any issues you are
+        experiencing.
+      </p>
+
+      <p class="feedback-description__text">Please use the form to contact us with your needs. Send us a message and
+        we'll respond as soon as possible.
+      </p>
+    </section>
+  </div>
+</main>
+
+@@include("blocks/footer.html")
+
+<script src="js/app.js" type="module" defer></script>
+</body>
+

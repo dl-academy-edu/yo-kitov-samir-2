@@ -11,13 +11,21 @@ $font-mono-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "
 */
 $font-base-family: $font-serif-family;
 
+$montserrat: 'Montserrat', Arial, sans-serif;
+$roboto: 'Roboto', Arial, sans-serif;
+$crimson: 'Crimson Text', Arial, serif;
+$open: 'Open Sans', Arial, sans-serif;
+$lato: 'Lato', Arial, sans-serif;
+
 /*
 * Breakpoints
 */
 
+$media-desktop: 1199px;
+$media-desktop-grid: 1399px;
+$media-menu: 840px;
 $media-tablet: 768px;
-$media-tablet-landscape: 1024px;
-$media-desktop: 1200px;
+$media-mobile: 767px;
 
 /*
 * Colors
@@ -54,3 +62,19 @@ $btn-active: #cfaf91;
 $text-checkbox-disabled: #908484;
 $disablet-checkbox: #e1cdba;
 $text-time: #818181;
+$dark-grey: #2c3036;
+$text-grid: #bcbcbe;
+$grid-grey-bg: #f7f8fa;
+$grid-orange-bg: #ef5539;
+$grid-violet-bg: #8f75bc;
+$grid-violet-circle: #8066b0;
+$grid-popular-bg: #8972b6;
+$grid-link-bg: #ffc80c;
+$grid-learn-color: #ffc80a;
+$grid-link-color: #2198f4;
+$grid-choice-bg: #fa684f;
+$grid-best-bg: #93b7b7;
+$grid-display-bg: #2c2c2c;
+$svg-sun: #ffce54;
+$svg-day: #5d9cec;
+$svg-block: #656d78;

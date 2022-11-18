@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en" class="no-js page">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width">
+  <meta name="google" content="notranslate">
+  <meta name="format-detection" content="telephone=no">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@200;300;600;700&family=Lato:wght@700&family=Open+Sans:wght@400;700&family=Roboto&display=swap"
+    rel="stylesheet">
+
+  <title>DL Academy страница blog учебного проекта</title>
+  <meta name="description" content="Верстка выполнена студентом с использованием технологий: Flex, scss, grid, gulp, html, семантическая верстка, адаптивная и резиновая верстка, svg, animation">
+  <meta name="keywords" content="Flex, scss, grid, gulp, html, семантическая верстка, адаптивная и резиновая верстка, svg, animation">
+
+  <script>
+    var docElement = document.documentElement;
+    docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
+  </script>
+
+  <!-- Favicon -->
+
+  <!-- build:css -->
+  <link href="css/style.min.css" rel="stylesheet">
+  <!-- endbuild -->
+</head>
+<body>
+@@include("blocks/header.html", {
+hrefLogo: "./index.html",
+hrefCatalog: "./catalog.html",
+hrefAbout: "./about.html",
+hrefBlog: "#",
+hrefAnimation: "./animation.html",
+hrefSvg: "./svg.html",
+hrefGrid: "./grid.html",
+hrefContact: "./contact.html"
+})
+
+<main>
+  <main>
+    <section class="page-title container">
+      <h1 class="page-title__title main-title">Blog</h1>
+
+      <ul class="page-title__crumbs">
+        <li class="page-title__crumbs__item">
+          <a href="./index.html" class="page-title__crumbs__link">Home</a>
+        </li>
+
+        <li class="page-title__crumbs__item page-title__crumbs__item--active">
+          <a class="page-title__crumbs__link">Blog</a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="blog container">
+      <h2 class="visually-hidden">Блоги</h2>
+
+      <div class="slider">
+        <div class="slider__ribbon">
+          <ul class="slider__list slider__list--blog">
+            <li class="slider__item slider__item--blog">
+              <h3 class="slider__name--blog">Top 5 fastest growing it service companies in philly</h3>
+              <img class="slider__img--blog" width="380" height="220" src="./img/constructor_heap.jpg"
+                   alt="Куча-мала из конструктора">
+              <p class="slider__time">23rd August 2018</p>
+              <p class="slider__text">Direct Line Development’s Team is excited to announce that we received
+                UpCity’s
+                2019 Local Excellence Award! This prestigious award is annually presented to the
+                Top 1% of service providers in the given marketplace.
+              </p>
+            </li>
+
+            <li class="slider__item slider__item--blog">
+              <h3 class="slider__name--blog">Best financial</h3>
+              <img class="slider__img--blog" width="380" height="220" src="./img/toys_animals.jpg"
+                   alt="Маленькие игрушки животных в кастюмах других животных">
+              <p class="slider__time">23rd August 2018</p>
+              <p class="slider__text">Direct Line Development is honored to be recognized as one of the Top 100
+                Fastest
+                Growing Companies 2019 in Philadelphia, according to Growjo’s ranking.
+              </p>
+            </li>
+
+            <li class="slider__item slider__item--blog">
+              <h3 class="slider__name--blog">Company logo or brand identity: which one is more important? brand
+                identity</h3>
+              <img class="slider__img--blog" width="380" height="220" src="./img/neatly_arranged_toys.jpg"
+                   alt="Аккуратно сложенные игрушки паравозик, обезьяна и другие">
+              <p class="slider__time">23rd August 2018</p>
+              <p class="slider__text">To survive in the world of digital marketing, you need to keep up with the
+                latest
+                SEO trends. Here are our simple, but effective, SEO tips for small business
+                success.
+              </p>
+            </li>
+
+            <li class="slider__item slider__item--blog">
+              <h3 class="slider__name--blog">Best financial</h3>
+              <img class="slider__img--blog" width="380" height="220" src="./img/toy_in_hand.jpg"
+                   alt="Рука ребенка которая держит игрушку из мультика Игрушки">
+              <p class="slider__time">23rd August 2018</p>
+              <p class="slider__text">Direct Line Development is honored to be recognized as one of the Top 100
+                Fastest
+                Growing Companies 2019 in Philadelphia, according to Growjo’s ranking.
+              </p>
+            </li>
+
+            <li class="slider__item slider__item--blog">
+              <h3 class="slider__name--blog">Company logo or brand identity: which one is more important? brand
+                identity</h3>
+              <img class="slider__img--blog" width="380" height="220" src="./img/barbie.jpg"
+                   alt="Маленькая пластмасовая кукла с длинными волосами">
+              <p class="slider__time">23rd August 2018</p>
+              <p class="slider__text">To survive in the world of digital marketing, you need to keep up with the
+                latest
+                SEO trends. Here are our simple, but effective, SEO tips for small business
+                success.
+              </p>
+            </li>
+
+            <li class="slider__item slider__item--blog">
+              <img class="slider__img--blog" width="380" height="220" src="./img/cubes.jpg"
+                   alt="Красивые стеклянные кубики синего оттенка">
+              <p class="slider__time">23rd August 2018</p>
+              <h3 class="slider__name--blog">Top 5 fastest growing it service companies in philly</h3>
+              <p class="slider__text">Direct Line Development’s Team is excited to announce that we received
+                UpCity’s
+                2019 Local Excellence Award! This prestigious award is annually presented to the
+                Top 1% of service providers in the given marketplace.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="slider__controls slider__controls--blog">
+          <button class="slider__controls__arrow slider__controls__arrow--left"></button>
+          <ul class="slider__controls__dots">
+            <li class="slider__controls__dot">
+              <button class="slider__controls__button slider__controls__button--active">1</button>
+            </li>
+
+            <li class="slider__controls__dot">
+              <button class="slider__controls__button">2</button>
+            </li>
+
+            <li class="slider__controls__dot">
+              <button class="slider__controls__button">3</button>
+            </li>
+
+            <li class="slider__controls__dot">
+              <button class="slider__controls__button">4</button>
+            </li>
+
+          </ul>
+          <button class="slider__controls__arrow slider__controls__arrow--right"></button>
+        </div>
+      </div>
+    </section>
+  </main>
+</main>
+
+@@include("blocks/footer.html")
+
+<script src="js/app.js" type="module" defer></script>
+</body>
+</html>

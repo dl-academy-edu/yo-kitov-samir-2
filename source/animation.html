@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en" class="no-js page">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width">
+  <meta name="google" content="notranslate">
+  <meta name="format-detection" content="telephone=no">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,400;1,700&family=Montserrat:wght@200;300;600;700&family=Lato:wght@700&family=Open+Sans:wght@400;700&family=Roboto&display=swap"
+    rel="stylesheet">
+
+  <title>DL Academy страница animation учебного проекта</title>
+  <meta name="description"
+        content="Верстка выполнена студентом с использованием технологий: Flex, scss, grid, gulp, html, семантическая верстка, адаптивная и резиновая верстка, svg, animation">
+  <meta name="keywords"
+        content="Flex, scss, grid, gulp, html, семантическая верстка, адаптивная и резиновая верстка, svg, animation">
+
+  <script>
+    var docElement = document.documentElement;
+    docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
+  </script>
+
+  <!-- Favicon -->
+
+  <!-- build:css -->
+  <link href="css/style.min.css" rel="stylesheet">
+  <!-- endbuild -->
+</head>
+<body>
+@@include("blocks/header.html", {
+hrefLogo: "./index.html",
+hrefCatalog: "./catalog.html",
+hrefAbout: "./about.html",
+hrefBlog: "./blog.html",
+hrefAnimation: "#",
+hrefSvg: "./svg.html",
+hrefGrid: "./grid.html",
+hrefContact: "./contact.html"
+})
+
+<main>
+  <section class="page-title container">
+    <h1 class="page-title__title main-title">Animation scene</h1>
+
+    <ul class="page-title__crumbs">
+      <li class="page-title__crumbs__item">
+        <a href="./index.html" class="page-title__crumbs__link">Home</a>
+      </li>
+
+      <li class="page-title__crumbs__item page-title__crumbs__item--active">
+        <a class="page-title__crumbs__link">Animation</a>
+      </li>
+    </ul>
+  </section>
+
+  <section class="animation">
+    <img class="animation__city" width="1586" height="631" src="./img/img_animation/city.svg" alt="Город">
+
+    <img class="animation__sun" width="60" height="59" src="./img/img_animation/sun.svg" alt="Солнце">
+
+    <img class="animation__clouds animation__clouds--1" width="1342" height="125" src="./img/img_animation/clouds.svg"
+         alt="Облака">
+    <img class="animation__clouds animation__clouds--2" width="1342" height="125" src="./img/img_animation/clouds.svg"
+         alt="Облака">
+
+    <div class="animation__car-wrap animation__car-wrap--1">
+      <img class="animation__car" width="251" height="85" src="./img/img_animation/car_one.svg"
+           alt="Нарисованая и анимированая машина">
+      <img class="animation__wheel animation__wheel--car-1-left" width="45" height="45"
+           src="./img/img_animation/wheel_car_one.svg"
+           alt="Нарисованая и анимированая колёса">
+      <img class="animation__wheel animation__wheel--car-1-right" width="45" height="45"
+           src="./img/img_animation/wheel_car_one.svg"
+           alt="Нарисованая и анимированая колёса">
+    </div>
+    <div class="animation__car-wrap animation__car-wrap--2">
+      <img class="animation__car" width="205" height="86" src="./img/img_animation/car_two.svg"
+           alt="Нарисованая и анимированая машина">
+      <img class="animation__wheel animation__wheel--car-2-left" width="33" height="33"
+           src="./img/img_animation/wheel_car_two.svg"
+           alt="Нарисованая и анимированая колёса">
+      <img class="animation__wheel animation__wheel--car-2-right" width="33" height="33"
+           src="./img/img_animation/wheel_car_two.svg"
+           alt="Нарисованая и анимированая колёса">
+    </div>
+    <div class="animation__car-wrap animation__car-wrap--3">
+      <img class="animation__car" width="247" height="54" src="./img/img_animation/car_three.svg"
+           alt="Нарисованая и анимированая машина">
+      <img class="animation__wheel animation__wheel--car-3-left" width="33" height="33"
+           src="./img/img_animation/wheel_car_two.svg"
+           alt="Нарисованая и анимированая колёса">
+      <img class="animation__wheel animation__wheel--car-3-right" width="33" height="33"
+           src="./img/img_animation/wheel_car_two.svg"
+           alt="Нарисованая и анимированая колёса">
+    </div>
+    <div class="animation__car-wrap animation__car-wrap--4">
+      <img class="animation__car" width="269" height="104" src="./img/img_animation/car_four.svg"
+           alt="Нарисованая и анимированая машина">
+      <img class="animation__wheel animation__wheel--car-4-left" width="51" height="50"
+           src="./img/img_animation/wheel_car_four.svg"
+           alt="Нарисованая и анимированая колёса">
+      <img class="animation__wheel animation__wheel--car-4-right" width="51" height="50"
+           src="./img/img_animation/wheel_car_four.svg"
+           alt="Нарисованая и анимированая колёса">
+    </div>
+
+    <img class="animation__lantern-off-left" width="151" height="396" src="./img/img_animation/lantern_off.svg"
+         alt="выключенный фонарь">
+    <img class="animation__lantern-off-right" width="151" height="396" src="./img/img_animation/lantern_off.svg"
+         alt="выключенный фонарь">
+
+    <img class="animation__lantern-on" width="215" height="563" src="./img/img_animation/lantern_on.svg"
+         alt="включенный фонарь">
+
+    <div class="animation__taxi-wrap">
+      <img class="animation__taxi" width="887" height="222" src="./img/img_animation/taxi.svg" alt="Машина такси">
+
+      <img class="animation__wheel-taxi animation__wheel--taxi-left" width="111" height="110"
+           src="./img/img_animation/wheel_taxi.svg"
+           alt="Левое колесо такси">
+      <img class="animation__wheel-taxi animation__wheel--taxi-right" width="111" height="110"
+           src="./img/img_animation/wheel_taxi.svg"
+           alt="Правое колесо такси">
+
+      <img class="animation__taxi-message" width="169" height="108" src="./img/img_animation/message_taxi.png"
+           alt="Диалоговое окно такси">
+    </div>
+
+    <div class="animation__woman-wrap">
+      <img class="animation__woman" width="192" height="270" src="./img/img_animation/woman.svg" alt="Девушка">
+      <img class="animation__woman-skirt" width="98" height="61" src="./img/img_animation/skirt.svg" alt="Юбка девушки">
+      <img class="animation__woman-hand" width="64" height="45" src="./img/img_animation/woman_hand.svg"
+           alt="Рука девушки">
+
+      <img class="animation__woman-message" width="169" height="108" src="./img/img_animation/message_woman.png"
+           alt="Диалоговое окно девушки">
+    </div>
+    <div class="animation__man-wrap">
+      <img class="animation__man" width="205" height="354" src="./img/img_animation/man.svg" alt="Мужчина">
+      <img class="animation__man-hand" width="89" height="129" src="img/img_animation/man_hand.svg" alt="Рука мужчины">
+
+      <img class="animation__man-message" width="168" height="86" src="./img/img_animation/message_man.png" alt="Диалоговое окно мужчины">
+      <img class="animation__man-message-2" width="168" height="86" src="./img/img_animation/message_two_man.png"
+           alt="Диалоговое окно №2 мужчины">
+    </div>
+  </section>
+</main>
+
+@@include("blocks/footer.html")
+</body>
+</html>

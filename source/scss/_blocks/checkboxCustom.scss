@@ -1,24 +1,24 @@
-.checkbox:disabled + .checkbox__homemade {
+input[type="checkbox"]:disabled + .checkbox__homemade {
   color: $text-checkbox-disabled;
 }
 
-.checkbox:checked + .checkbox__homemade:before {
-  display: block;
+input[type="checkbox"]:checked + .checkbox-custom:before {
+  opacity: 1;
 }
 
-.checkbox:focus + .checkbox__homemade:after {
+input[type="checkbox"]:focus + .checkbox-custom:after {
   outline: 2px solid $basic-black;
 }
 
-.checkbox:checked + .checkbox__homemade:after {
+input[type="checkbox"]:checked + .checkbox-custom:after {
   background-color: $basic-white;
 }
 
-.checkbox:disabled + .checkbox__homemade:after {
+input[type="checkbox"]:disabled + .checkbox-custom:after {
   border: 2px solid $disablet-checkbox;
 }
 
-.checkbox__homemade {
+.checkbox-custom {
   position: relative;
 
   &:hover {
@@ -33,22 +33,29 @@
     top: 50%;
     left: 0;
 
-    -webkit-transform: translateY(-50%);
-
-    -ms-transform: translateY(-50%);
-
     transform: translateY(-50%);
 
     width: 19px;
     height: 19px;
+
+    @media (max-width: $media-mobile) {
+      width: 17px;
+      height: 17px;
+    }
   }
 
   &:before {
     background-image: url("../../img/svg/mark.svg");
     background-position: 3px 0;
     background-repeat: no-repeat;
-    display: none;
+    opacity: 0;
     z-index: 1;
+    transition: 0.4s;
+
+    @media (max-width: $media-mobile) {
+      left: -1px;
+      top: 49%;
+    }
   }
 
   &:after {
