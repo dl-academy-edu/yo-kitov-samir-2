@@ -300,7 +300,7 @@
 
 /*.products*/
 .products {
-  padding: 92px 60px 89px 60px;
+  padding: 92px 60px 91px;
 
   @media (max-width: $media-tablet) {
     padding: 61px 0 61px 60px;
@@ -325,32 +325,14 @@
 
 /*.products-slider*/
 .products-slider {
-  position: relative;
   width: 100%;
-  min-height: 345px;
-
-  display: flex;
-  align-items: flex-end;
-
   overflow: hidden;
-  @media (max-width: $media-tablet) {
-    min-height: 314px;
-    width: 100%;
-
-    overflow: auto;
-  }
-
-  @media (max-width: $media-mobile) {
-    min-height: 334px;
-  }
 }
 
 .products-slider__slides {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
 
-  max-width: 100%;
+  width: 0;
 
   display: flex;
   flex-wrap: nowrap;
@@ -418,10 +400,11 @@
   display: flex;
   align-items: center;
 
-  margin-top: 31px;
+  margin-top: 28px;
 
   @media (max-width: $media-mobile) {
     align-items: start;
+    margin-top: 19px;
   }
 }
 
@@ -656,7 +639,7 @@
 /*about-us*/
 .about-us {
   display: grid;
-  grid-template-columns: minmax(300px, 543px) minmax(300px, 543px);
+  grid-template-columns: minmax(275px, 543px) minmax(275px, 543px);
   grid-gap: 57px;
   align-items: start;
   justify-content: center;

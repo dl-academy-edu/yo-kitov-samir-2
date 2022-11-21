@@ -1,8 +1,5 @@
-import {moveSlider} from "./utils.js";
+import {moveSlider, startSlideCounter} from "./utils.js";
 
-
-const arrowLeft = document.querySelector('.products-slider__navigation__arrow--arrow-left')
-const arrowRight = document.querySelector('.products-slider__navigation__arrow--arrow-right')
 const arrowBox = document.querySelector('.products-slider__navigation')
 const parentSlides = document.querySelector('.categories')
 
@@ -11,20 +8,6 @@ let step = 1;
 let visibleSlides = 1;
 
 // const a = document.querySelector(`.categories`);
-
-function startSlideCounter() {
-  let counterSlide = 0;
-
-  return function (parentSlides, step, visibleSlides, leftOrRight) {
-    switch (leftOrRight) {
-      case 'left':
-        return counterSlide -= Math.min(step, parentSlides.children.length - (parentSlides.children.length - counterSlide))
-
-      case 'right':
-        return counterSlide += Math.min(step, parentSlides.children.length - counterSlide - visibleSlides)
-    }
-  }
-}
 
 const getCountSlides = startSlideCounter();
 
@@ -41,13 +24,13 @@ if (arrowBox) {
       case 'right':
         // counterSlide += Math.min(step, a.children.length - counterSlide - visibleSlides);
         // moveSlider('.categories', counterSlide);
-        moveSlider('.categories', getCountSlides(parentSlides, step, visibleSlides, 'right'));
+        moveSlider(parentSlides , getCountSlides(parentSlides, step, visibleSlides, 'right'));
         break;
 
       case 'left':
         // counterSlide -= Math.min(step, a.children.length - (a.children.length - counterSlide)) ;
         // moveSlider('.categories', counterSlide);
-        moveSlider('.categories', getCountSlides(parentSlides, step, visibleSlides, 'left'));
+        moveSlider(parentSlides , getCountSlides(parentSlides, step, visibleSlides, 'left'));
         break;
 
       default:

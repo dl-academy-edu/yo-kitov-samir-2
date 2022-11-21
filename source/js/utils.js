@@ -1,10 +1,19 @@
-const flipSliderCatalog = () => {
+function startSlideCounter() {
+  let counterSlide = 0;
 
+  return function (parentSlides, step, visibleSlides, leftOrRight) {
+    switch (leftOrRight) {
+      case 'left':
+        return counterSlide -= Math.min(step, parentSlides.children.length - (parentSlides.children.length - counterSlide))
+
+      case 'right':
+        return counterSlide += Math.min(step, parentSlides.children.length - counterSlide - visibleSlides)
+    }
+  }
 }
 
-function moveSlider(parentSelector, numberSlide) {
-  const parent = document.querySelector(`${parentSelector}`);
-  parent.style.left = -parent.children[numberSlide].offsetLeft + 'px';
+function moveSlider(parentElem, numberSlide) {
+  parentElem.style.marginLeft = -parentElem.children[numberSlide].offsetLeft + 'px';
 }
 
-export {moveSlider}
+export {moveSlider, startSlideCounter}
