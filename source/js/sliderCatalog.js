@@ -1,15 +1,14 @@
-import {moveSlider, startSlideCounter} from "./utils.js";
+import {moveSlider, changeCounterArrows} from "./utils.js";
 
 const arrowBox = document.querySelector('.products-slider__navigation')
 const parentSlides = document.querySelector('.categories')
 
+const counter = {
+  count: 1
+}
+
 let step = 1;
-// let counterSlide = 0;
 let visibleSlides = 1;
-
-// const a = document.querySelector(`.categories`);
-
-const getCountSlides = startSlideCounter();
 
 if (arrowBox) {
   arrowBox.addEventListener("click", (e) => {
@@ -22,15 +21,11 @@ if (arrowBox) {
 
     switch(dataArrow) {
       case 'right':
-        // counterSlide += Math.min(step, a.children.length - counterSlide - visibleSlides);
-        // moveSlider('.categories', counterSlide);
-        moveSlider(parentSlides , getCountSlides(parentSlides, step, visibleSlides, 'right'));
+        moveSlider(parentSlides , changeCounterArrows(parentSlides, step, visibleSlides, 'right', counter));
         break;
 
       case 'left':
-        // counterSlide -= Math.min(step, a.children.length - (a.children.length - counterSlide)) ;
-        // moveSlider('.categories', counterSlide);
-        moveSlider(parentSlides , getCountSlides(parentSlides, step, visibleSlides, 'left'));
+        moveSlider(parentSlides , changeCounterArrows(parentSlides, step, visibleSlides, 'left', counter));
         break;
 
       default:
