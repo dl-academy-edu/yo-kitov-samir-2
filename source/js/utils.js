@@ -1,10 +1,10 @@
-function changeCounterArrows(parentSlides, step, visibleSlides, leftOrRight, count) {
-  switch (leftOrRight) {
+function changeCounterArrows({parentSlides, step, visibleSlides, side, counter}) {
+  switch (side) {
     case 'left':
-      return count.count -= Math.min(step, parentSlides.children.length - (parentSlides.children.length - count.count))
+      return counter.count -= Math.min(step, parentSlides.children.length - (parentSlides.children.length - counter.count))
 
     case 'right':
-      return count.count += Math.min(step, parentSlides.children.length - count.count - visibleSlides)
+      return counter.count += Math.min(step, parentSlides.children.length - counter.count - visibleSlides)
   }
 }
 
@@ -41,9 +41,9 @@ function createNumberButton(number, selectorItem, selectorButton, controlActive,
   return result;
 }
 
-function makeItemActive(parentControls, prevSlider, number, selectorActive) {
-  parentControls.children[prevSlider].classList.remove(selectorActive);
-  parentControls.children[number].classList.add(selectorActive);
+function makeItemActive(parentDots, prevDot, currentDot, selectorActive) {
+  parentDots.children[prevDot].classList.remove(selectorActive);
+  parentDots.children[currentDot].classList.add(selectorActive);
 }
 
 export {moveSlider, changeCounterArrows, createNumberButton, makeItemActive, changeCounterButtons}

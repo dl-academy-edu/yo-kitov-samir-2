@@ -77,11 +77,6 @@ if (document.querySelector('.slider-banner__navigation__list')) {
     counterSlider.textContent = `0${number}`;
   }
 
-  // function makeItemActive(number, prevSlider) {
-  //   listControls.children[prevSlider - 1].classList.remove(CONTROL_ACTIVE);
-  //   listControls.children[number - 1].classList.add(CONTROL_ACTIVE);
-  // }
-
   function hideSlide(prevItem) {
     const previousSlide = listSlider.children[prevItem - 1];
 
