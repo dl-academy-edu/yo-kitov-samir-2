@@ -1,32 +1,21 @@
-import {moveSlider, changeCounterArrows} from "./utils.js";
+import {moveSlider, changeCounterArrows} from './utils.js';
 
-const arrowBox = document.querySelector('.products-slider__navigation')
-const parentSlides = document.querySelector('.categories')
+const arrowBox = document.querySelector('.products-slider__navigation');
+const parentSlides = document.querySelector('.categories');
 
-let step = 1;
-let visibleSlides = 1;
+const right = 'right';
+const left = 'left';
 
-const counter = {
-  count: 1
-}
-
-const counterParametersRight = {
+const parametersSlider = {
   parentSlides: parentSlides,
-  step: step,
-  visibleSlides: visibleSlides,
-  side: 'right',
-  counter: counter
-}
-const counterParametersLeft = {
-  parentSlides: parentSlides,
-  step: step,
-  visibleSlides: visibleSlides,
-  side: 'left',
-  counter: counter
-}
+  step: 1,
+  visibleSlides: 1,
+  counter: 1,
+  prevCounter: 0
+};
 
 if (arrowBox) {
-  arrowBox.addEventListener("click", (e) => {
+  arrowBox.addEventListener('click', (e) => {
     if (!e.target.closest('.products-slider__navigation__arrow')) {
       return;
     }
@@ -34,17 +23,18 @@ if (arrowBox) {
     const target = e.target;
     const dataArrow = target.dataset.arrow;
 
-    switch(dataArrow) {
+    switch (dataArrow) {
       case 'right':
-        moveSlider(parentSlides , changeCounterArrows(counterParametersRight));
+        parametersSlider.counter = changeCounterArrows(parametersSlider, right);
+
+        moveSlider(parentSlides, parametersSlider.counter);
         break;
 
       case 'left':
-        moveSlider(parentSlides , changeCounterArrows(counterParametersLeft));
-        break;
+        parametersSlider.counter = changeCounterArrows(parametersSlider, left);
 
-      default:
-        return;
+        moveSlider(parentSlides, parametersSlider.counter);
+        break;
     }
-  })
+  });
 }
