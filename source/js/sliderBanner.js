@@ -1,8 +1,9 @@
+import {makeItemActive} from './utils.js'
+
 if (document.querySelector('.slider-banner__navigation__list')) {
   const listControls = document.querySelector('.slider-banner__navigation__list');
-  const itemControl = listControls.querySelector('.slider-banner__navigation__item');
+  const itemControl = document.querySelector('.slider-banner__navigation__item');
   const listSlider = document.querySelector('.slider-banner__list');
-  const itemSlider = listSlider.querySelector('.slider-banner__item');
   const counterSlider = document.querySelector('.slider-banner__navigation__counter');
 
   // Номер слайда который быдет активным при загрузки страницы
@@ -10,6 +11,7 @@ if (document.querySelector('.slider-banner__navigation__list')) {
   const ITEM_ACTIVE = 'slider-banner__item--active';
   const ITEM_HIDDEN = 'slider-banner__item--hidden';
   const CONTROL_ACTIVE = 'slider-banner__navigation__item--active';
+  const BUTTON = '.slider-banner__navigation__button';
 
   // Храним номер предыдущего слайда
   let previousNumber = Number(listControls.querySelector(`.${CONTROL_ACTIVE}`).dataset.buttonNumber);
@@ -24,12 +26,12 @@ if (document.querySelector('.slider-banner__navigation__list')) {
   // При загрузке страницы удалить все кнопки переключения слайдов
   // и добавить заного столько-же кнопок сколько и слайдов
   listControls.replaceChildren();
-  listControls.append(...createControls(listSlider.children.length));
+  listControls.append(...createControls(listSlider.children.length, BUTTON));
 
   listControls.addEventListener('click', onControlClick);
 
   if (localStorage.slide) {
-    activateSlider(localStorage.slide, previousNumber);
+    activateSlider(localStorage.slide);
   }
 
   // функции
@@ -41,15 +43,15 @@ if (document.querySelector('.slider-banner__navigation__list')) {
       return;
     }
 
-    activateSlider(data, previousNumber);
+    activateSlider(data);
   }
 
-  function createControls(number) {
+  function createControls(number, selectorItem) {
     const result = [];
 
     for (let i = 1; i <= number; i++) {
       const control = itemControl.cloneNode(true);
-      const buttonControl = control.querySelector('.slider-banner__navigation__button');
+      const buttonControl = control.querySelector(selectorItem);
 
       buttonControl.setAttribute('aria-label', `Переключить на ${i} слайдер`);
       control.dataset.buttonNumber = i.toString();
@@ -73,11 +75,6 @@ if (document.querySelector('.slider-banner__navigation__list')) {
 
   function setCounter(number) {
     counterSlider.textContent = `0${number}`;
-  }
-
-  function makeItemActive(number, prevSlider) {
-    listControls.children[prevSlider - 1].classList.remove(CONTROL_ACTIVE);
-    listControls.children[number - 1].classList.add(CONTROL_ACTIVE);
   }
 
   function hideSlide(prevItem) {
@@ -108,11 +105,11 @@ if (document.querySelector('.slider-banner__navigation__list')) {
     localStorage.slide = number;
   }
 
-  function activateSlider(number, prevItem) {
+  function activateSlider(number) {
     setCounter(number);
     hideSlide(previousNumber);
     showSlide(number);
-    makeItemActive(number, previousNumber);
+    makeItemActive(listControls, previousNumber - 1, number - 1, CONTROL_ACTIVE);
 
     previousNumber = number;
     saveSlideToStorage(previousNumber);
